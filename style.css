@@ -1466,6 +1466,21 @@ h3.entry-title {
   padding: 0 3px
 }
 
+/* ハイライト グレー */
+.highlight-gray {
+  background: linear-gradient(transparent 60%, lightgray 60%);
+  padding: 0 3px
+}
+
+/* 強調フォント(24px) */
+.font-24px {
+  font-size: 24px;
+}
+/* 強調フォント(36px) */
+.font-36px {
+  font-size: 36px;
+}
+
 /* 引用 */
 blockquote {
   border: none;
@@ -1978,6 +1993,7 @@ a img            {border: none}
 
 /*テキストパーツにフォーカスすると色を変更*/
 .wpcf7 input[type=text]:focus,
+.wpcf7 input[type=email]:focus,
 .wpcf7 textarea:focus {
   border-color: #83B6C2;
   outline: none;

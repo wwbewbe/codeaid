@@ -198,7 +198,16 @@ function editor_setting($init) {
       'wrapper' => true ),
     array( 'title' => 'Highlight',
       'inline' => 'span',
-      'classes' => 'highlight') );
+      'classes' => 'highlight'),
+    array( 'title' => '24px',
+      'inline' => 'span',
+      'classes' => 'font-24px'),
+    array( 'title' => '36px',
+      'inline' => 'span',
+      'classes' => 'font-36px'),
+    array( 'title' => 'Highlight-gray',
+      'inline' => 'span',
+      'classes' => 'highlight-gray') );
   $init[ 'style_formats' ] = json_encode( $style_formats );
 
   return $init;
