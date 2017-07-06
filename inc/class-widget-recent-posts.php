@@ -56,6 +56,7 @@ class Widget_Recent_Posts extends WP_Widget {
      * @param array $args An array of arguments used to retrieve the recent posts.
      */
     $r = new WP_Query( apply_filters( 'widget_recent_posts_args', array(
+      'post_type'           => 'ca_blog',
       'posts_per_page'      => $number,
       'no_found_rows'       => true,
       'post_status'         => 'publish',

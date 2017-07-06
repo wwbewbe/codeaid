@@ -199,15 +199,15 @@ function editor_setting($init) {
     array( 'title' => 'Highlight',
       'inline' => 'span',
       'classes' => 'highlight'),
+    array( 'title' => 'Highlight-gray',
+      'inline' => 'span',
+      'classes' => 'highlight-gray'),
     array( 'title' => '24px',
       'inline' => 'span',
       'classes' => 'font-24px'),
     array( 'title' => '36px',
       'inline' => 'span',
-      'classes' => 'font-36px'),
-    array( 'title' => 'Highlight-gray',
-      'inline' => 'span',
-      'classes' => 'highlight-gray') );
+      'classes' => 'font-36px') );
   $init[ 'style_formats' ] = json_encode( $style_formats );
 
   return $init;
