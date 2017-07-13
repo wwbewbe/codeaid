@@ -18,7 +18,7 @@
  */
 function codeaid_custom_header_setup() {
   add_theme_support( 'custom-header', apply_filters( 'codeaid_custom_header_args', array(
-    'default-image'          => '%s/img/main.jpg',
+    'default-image'          => '%s/img/site-top.png',
     'default-text-color'     => '000000',
     'width'                  => 1600,
     'height'                 => 400,
