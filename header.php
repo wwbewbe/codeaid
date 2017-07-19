@@ -133,7 +133,7 @@
 
   <header id="masthead" class="site-header" role="banner">
     <div class="row">
-      <div class="site-branding large-12 columns">
+      <div class="site-branding col-md-12 large-12 columns">
         <h1 class="site-logo">
           <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
             <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="codeaid" />
@@ -142,17 +142,19 @@
       </div>
     </div>
     <div id="site-navi" class="main-navi">
-      <div id="small-navi"></div>
+      <div id="small-navi">
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".header-nav" id="navbtn">
+        <i class="fa fa-bars"></i><span>MENU</span>
+        </button>
+      </div>
       <div class="row">
-        <div class="large-12 columns">
-          <button type="button" id="navbtn">
-          <i class="fa fa-bars"></i><span>MENU</span>
-          </button>
+        <div class="col-md-12 large-12 columns">
           <?php wp_nav_menu( array(
                   'theme_location' => 'primary',
                   'container' => 'nav',
-                  'container_class' => 'header-nav',
-                  'container_id' => 'header-nav'
+                  'container_class' => 'header-nav navbar-collapse collapse',
+//                  'container_id' => 'header-nav',
+//                  'menu_class' => 'nav navbar-nav'
           ) ); ?>
         </div>
       </div>
@@ -171,7 +173,7 @@
 
 <?php if ( ! is_home() && ! is_front_page() && is_my_plugin_active( 'show-adsense/show-adsense.php' ) ) : ?>
   <div class="row">
-    <div class="large-12 columns">
+    <div class="col-md-12 large-12 columns">
       <?php echo do_shortcode( '[showad id="header"]' ); ?>
     </div>
   </div>

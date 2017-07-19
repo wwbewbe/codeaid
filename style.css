@@ -47,6 +47,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 # Normalize
 --------------------------------------------------------------*/
 html {
+  font-size: 16px;
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust:     100%;
@@ -248,9 +249,12 @@ table {
   border-spacing: 0;
 }
 
-td,
-th {
-  padding: 0;
+blockquote, dd, div, dl, dt, form,
+h1, h2, h3, h4, h5, h6,
+li, ol, p, pre, td, th,
+ul {
+    margin: 0;
+    padding: 0;
 }
 
 /*--------------------------------------------------------------
@@ -263,7 +267,6 @@ select,
 textarea {
   color: #404040;
   font-family: -apple-system, BlinkMacSystemFont, "メイリオ", Meiryo, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", Roboto, sans-serif;
-  font-size: 16px;
   font-size: 1rem;
   line-height: 1.5;
 }
@@ -322,6 +325,15 @@ ins {
 
 big {
   font-size: 125%;
+}
+
+label {
+  display: block;
+  margin: 0;
+  font-size: .875rem;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #0a0a0a;
 }
 
 /*--------------------------------------------------------------
@@ -501,6 +513,9 @@ textarea {
   border: 1px solid #ccc;
   border-radius: 3px;
   padding: 3px;
+  width: 100%;
+  height: 2.4375rem;
+  margin: 0 0 1rem;
 }
 
 select {
@@ -557,6 +572,7 @@ a:focus {
 a:hover,
 a:active {
   outline: 0;
+  text-decoration: none;
 }
 
 /*--------------------------------------------------------------
@@ -780,7 +796,7 @@ a:active {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4);
   z-index: 1;
   background-color: #529db0;
-  height: 2.625rem;
+  height: 2.5625rem;
 }
 
 #site-navi.fixed {
@@ -810,8 +826,8 @@ a:active {
 }
 
 .header-nav li a:hover,
-#header-nav ul li ul.sub-menu li a:hover,
-#header-nav ul li ul.sub-menu li.current-menu-item a:hover {
+.header-nav ul li ul.sub-menu li a:hover,
+.header-nav ul li ul.sub-menu li.current-menu-item a:hover {
   background-color: #eeeeee;
   color: black;
 }
@@ -820,10 +836,6 @@ a:active {
 
 @media (min-width: 768px) {/* 大きな画面の表示 */
   /* ナビゲーションメニューのリンクを横に並べる設定 */
-  #header-nav {
-    display: block !important; /* 画面サイズを変更してもメニューを確実に表示 */
-  }
-
   .header-nav li {
     float: left;
     position: relative; /*z-indexの指定や子要素の基準とするために指定*/
@@ -835,22 +847,22 @@ a:active {
   }
 
   /* サブメニュー */
-  #header-nav ul li ul.sub-menu {
+  .header-nav ul li ul.sub-menu {
     display: none;            /*サブメニューは最初は非表示にしておく*/
     position: absolute;        /*絶対配置にしておかないとうまくいかない*/
-    top: 2.625rem;
+    top: 2.5625rem;
     left: 0;
     border-top: 1px solid #EEE;    /*ボーダートップを指定*/
     width: 160px;
   }
-  #header-nav ul li:hover ul.sub-menu {
+  .header-nav ul li:hover ul.sub-menu {
     display: block;            /*マウスオーバー時にサブメニューを表示する*/
   }
-  #header-nav ul li ul.sub-menu li{
+  .header-nav ul li ul.sub-menu li{
     float: none;            /*サブメニューはフロートさせないので解除*/
     padding: 0;                /*親メニューのパディングを解除*/
   }
-  #header-nav ul li ul.sub-menu li a {
+  .header-nav ul li ul.sub-menu li a {
     border: 1px solid #eee;    /*ボーダーの指定*/
     border-top: none;        /*ボーダートップは重なって太くなるので解除。一番上は ul 要素に指定*/
     padding: 0 10px;
@@ -859,7 +871,7 @@ a:active {
     text-align: left;
   }
   /*サブメニューで現在表示されているページのリンクの色を変更する*/
-  #header-nav ul li ul.sub-menu li.current-menu-item a {
+  .header-nav ul li ul.sub-menu li.current-menu-item a {
     display: block;
     background-color: #484848;
   }
@@ -867,7 +879,7 @@ a:active {
 
 @media only screen and (max-width: 767px) {/* スマホ・タブレットの表示 */
   #small-navi {
-    height: 2.625rem;
+    height: 2.5625rem;
     position: relative;
   }
 
@@ -875,7 +887,7 @@ a:active {
     background-color: #cddee4;
   }
 
-  #header-nav ul li ul.sub-menu li:last-child {
+  .header-nav ul li ul.sub-menu li:last-child {
     border-bottom: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
@@ -893,12 +905,12 @@ a:active {
     padding: 3px 15px;
   }
 
-  #header-nav ul li ul.sub-menu {
+  .header-nav ul li ul.sub-menu {
     margin-left: 1rem;
   }
 
   /* トグルボタンを表示 */
-  #header-nav {
+  .header-nav {
     display: none;
   }
 
@@ -907,6 +919,7 @@ a:active {
     position: absolute;
     top: 5px;
     right: 20px;
+    margin: 0;
     padding: 6px 12px;
     border: solid 1px #aaaaaa;
     border-radius: 5px;
@@ -1159,7 +1172,7 @@ a:active {
 .search-submit {
   display: block;
   visibility: hidden;
-  height: 0
+  height: 0;
   padding: 0 !important;
   border: 0 !important;
 }
@@ -1242,6 +1255,12 @@ h3.entry-title {
 .entry-content h4 {
   border-bottom: 1px dashed #529db0;
   padding: 10px 0 5px 0;
+  margin-bottom: 5px;
+}
+
+.entry-content h5 {
+  padding: 10px 0 5px 0;
+  margin-bottom: 5px;
 }
 
 /*--------------------------------------------------------------
@@ -1322,6 +1341,7 @@ h3.entry-title {
 .entry-tax a,
 .tagcloud a,
 .tags-links a {
+  font-size: 0.75rem !important;
 	display: inline-block;
   margin-right: 5px;
   margin-bottom: 5px;
@@ -1977,12 +1997,17 @@ a img            {border: none}
   display: block;
 }
 /*--------------------------------------------------------------
-# Foundation Customize
+# Foundation / Bootstrap Customize
 --------------------------------------------------------------*/
 .row {
-  max-width: 62.5em;
+  margin-right: auto;
+  margin-left: auto;
 }
-
+.thumbnail {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
 /*--------------------------------------------------------------
 # Contact Form 7 Customize
 --------------------------------------------------------------*/

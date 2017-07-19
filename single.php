@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-  <div id="primary" class="content-area large-9 columns">
+  <div id="primary" class="content-area col-md-9 large-9 columns">
     <div class="bread">
       <?php if( has_category() ): ?>
         <?php $postcats=get_the_category(); ?>
@@ -69,7 +69,7 @@ get_header(); ?>
         <ul>
           <div class="row">
           <?php while($the_query->have_posts()) : $the_query->the_post(); ?>
-            <div class="related-contents large-3 columns">
+            <div class="related-contents col-md-3 large-3 columns">
             <li>
               <a href="<?php the_permalink(); ?>">
               <div class="related-thumb" style="background-image: url(<?php echo get_thumbnail_url( 'medium' ); ?>)"></div>

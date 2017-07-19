@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-  <div id="primary" class="content-area large-9 columns">
+  <div id="primary" class="content-area col-md-9 large-9 columns">
     <main id="main" class="site-main" role="main">
 
       <section class="error-404 not-found">
