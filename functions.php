@@ -41,8 +41,8 @@ function codeaid_setup() {
    * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
    */
   add_theme_support( 'post-thumbnails' );
-  add_image_size( 'latest-top-thumb', 210, 210, true );
-  add_image_size( 'feature-top-thumb', 300, 125, true );
+  add_image_size( 'latest-top-thumb', 250, 250, true );
+  add_image_size( 'pickup-top-thumb', 250, 150, true );
 
   // This theme uses wp_nav_menu() in one location.
   register_nav_menus( array(

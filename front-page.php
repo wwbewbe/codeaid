@@ -34,7 +34,7 @@ get_header(); ?>
 	$myposts = wp_get_nav_menu_items( $locations[ $location_name ] );
 	if( $myposts ): ?>
 
-    <div class="row front-feature">
+    <div class="row front-pickup">
       <div class="col-md-12">
         <h3><?php echo esc_html__( 'Feature Posts', 'codeaid' ); ?></h3>
         <div class="row">
@@ -46,10 +46,10 @@ get_header(); ?>
             <div class="col-md-3 col-sm-3 col-xs-12">
             	<a href="<?php the_permalink(); ?>">
                 <div class="row">
-                  <div class="col-md-12 col-sm-12 col-xs-5">
-            	      <img class="topic-thumbnail" src="<?php echo get_thumbnail_url( 'feature-top-thumb' ); ?>">
+                  <div class="pickup-thumb col-md-12 col-sm-12 col-xs-5">
+            	      <img src="<?php echo get_thumbnail_url( 'pickup-top-thumb' ); ?>">
                   </div>
-                  <div class="col-md-12 col-sm-12 col-xs-7">
+                  <div class="pickup-text col-md-12 col-sm-12 col-xs-7">
                     <h5><?php the_title() ?></h5>
                     <?php if ( is_singular( 'ca_blog' ) ) :?>
                       <div class="date">
@@ -119,11 +119,13 @@ get_header(); ?>
     </div> <!-- /front-news -->
   <?php endif; ?>
 
-  <div class="row front-sp front-feature">
+  <div class="row front-sp">
     <?php if ( get_page_by_path( 'about' ) ) : ?>
       <div class="col-md-6 col-sm-6">
         <div class="sep">
-          <a href="<?php echo get_permalink( get_page_by_path( 'about' )->ID ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/about.png" alt=""></a>
+          <div class="thumbnail">
+            <a href="<?php echo get_permalink( get_page_by_path( 'about' )->ID ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/about.png" alt=""></a>
+          </div>
           <h5><a href="<?php echo get_permalink( get_page_by_path( 'about' )->ID ); ?>"><?php echo esc_html__( 'About CodeAid', 'codeaid' ); ?></a></h5>
           <p><?php echo esc_html__( 'If you&rsquo;d like to start programming, but you do not know what to do. CodeAid support beginners who do not know what to do, support to start programming and to grow.', 'codeaid' ); ?></p>
         </div>
@@ -132,7 +134,9 @@ get_header(); ?>
     <?php if ( get_page_by_path( 'contact' ) ) : ?>
       <div class="col-md-6 col-sm-6">
         <div class="sep">
-          <a href="<?php echo get_permalink( get_page_by_path( 'contact' )->ID ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/contact.jpg" alt=""></a>
+          <div class="thumbnail">
+            <a href="<?php echo get_permalink( get_page_by_path( 'contact' )->ID ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/contact.jpg" alt=""></a>
+          </div>
           <h5><a href="<?php echo get_permalink( get_page_by_path( 'contact' )->ID ); ?>"><?php echo esc_html__( 'Contact', 'codeaid' ); ?></a></h5>
           <p><?php echo esc_html__( 'If you have any questions or comments, please contact me in this form.', 'codeaid' ); ?></p>
         </div>
