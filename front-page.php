@@ -122,24 +122,28 @@ get_header(); ?>
   <div class="row front-sp">
     <?php if ( get_page_by_path( 'about' ) ) : ?>
       <div class="col-md-6 col-sm-6">
-        <div class="sep">
-          <div class="thumbnail">
-            <a href="<?php echo get_permalink( get_page_by_path( 'about' )->ID ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/about.png" alt=""></a>
+        <a href="<?php echo get_permalink( get_page_by_path( 'about' )->ID ); ?>">
+          <div class="sp-thumb">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/about.png" alt="">
           </div>
-          <h5><a href="<?php echo get_permalink( get_page_by_path( 'about' )->ID ); ?>"><?php echo esc_html__( 'About CodeAid', 'codeaid' ); ?></a></h5>
-          <p><?php echo esc_html__( 'If you&rsquo;d like to start programming, but you do not know what to do. CodeAid support beginners who do not know what to do, support to start programming and to grow.', 'codeaid' ); ?></p>
-        </div>
+          <div class="sp-text">
+            <h5><?php echo esc_html__( 'About CodeAid', 'codeaid' ); ?></h5>
+            <p><?php echo esc_html__( 'If you&rsquo;d like to start programming, but you do not know what to do. CodeAid support beginners who do not know what to do, support to start programming and to grow.', 'codeaid' ); ?></p>
+          </div>
+        </a>
       </div>
     <?php endif; ?>
     <?php if ( get_page_by_path( 'contact' ) ) : ?>
       <div class="col-md-6 col-sm-6">
-        <div class="sep">
-          <div class="thumbnail">
-            <a href="<?php echo get_permalink( get_page_by_path( 'contact' )->ID ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/contact.jpg" alt=""></a>
+        <a href="<?php echo get_permalink( get_page_by_path( 'contact' )->ID ); ?>">
+          <div class="sp-thumb">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/contact.jpg" alt="">
           </div>
-          <h5><a href="<?php echo get_permalink( get_page_by_path( 'contact' )->ID ); ?>"><?php echo esc_html__( 'Contact', 'codeaid' ); ?></a></h5>
-          <p><?php echo esc_html__( 'If you have any questions or comments, please contact me in this form.', 'codeaid' ); ?></p>
-        </div>
+          <div class="sp-text">
+            <h5><?php echo esc_html__( 'Contact', 'codeaid' ); ?></h5>
+            <p><?php echo esc_html__( 'If you have any questions or comments, please contact me in this form.', 'codeaid' ); ?></p>
+          </div>
+        </a>
       </div>
     <?php endif; ?>
   </div>

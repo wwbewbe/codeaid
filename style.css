@@ -1391,10 +1391,6 @@ h3.entry-title {
   .tags-links a {
     margin-bottom: 0;
   }
-  .front-feature .sep {
-    border-top: thin dotted #dddddd;
-    padding-top: 8px;
-  }
 }
 
 /* 補足情報 */
@@ -1759,7 +1755,6 @@ blockquote:after {
   -moz-border-radius: 5px;
   overflow: hidden;
   font-size: 0.875em;
-/*  height: 320px;*/
 }
 
 .news-meta {
@@ -1775,7 +1770,7 @@ blockquote:after {
   -moz-border-radius: 50%;
 }
 /**
- * For overlay thumbnail & text for front-pickup
+ * For overlay thumbnail & text for front-pickup & front-sp
  */
 .front-pickup a {
  position: relative;
@@ -1808,6 +1803,44 @@ blockquote:after {
 .front-pickup .pickup-text h5 {
   color: #FFF;
   font-size: 1.125rem;
+}
+
+.front-sp .sp-text h5 {
+  font-weight: bold;
+  color: #FFF;
+  font-size: 1.875rem;
+  margin-bottom: 5px;
+}
+.front-sp {
+  margin-bottom: 20px;
+}
+.front-sp a {
+  position: relative;
+  padding: 0;
+  display: block;
+}
+.front-sp a:hover {
+  opacity: 0.8;
+}
+.front-sp .thumbnail {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.front-sp .sp-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 10px;
+  color: #FFF;
+  text-shadow: 1px 1px 3px #000;
+}
+
+@media only screen and (max-width: 768px) {
+  .front-sp .sp-text {
+    font-size: 0.875rem;
+  }
 }
 
 @media only screen and (max-width: 1023px) {
