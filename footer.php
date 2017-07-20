@@ -15,7 +15,7 @@
 
   <?php if ( ! is_home() && ! is_front_page() && is_my_plugin_active( 'show-adsense/show-adsense.php' ) ) : ?>
     <div class="row">
-      <div class="col-md-12 large-12 columns">
+      <div class="col-md-12">
         <?php echo do_shortcode( '[showad id="footer"]' ); ?>
       </div>
     </div>
@@ -23,7 +23,7 @@
 
   <footer id="colophon" class="site-footer" role="contentinfo">
     <div class="row">
-      <div class="col-md-12 large-12 columns">
+      <div class="col-md-12">
         <?php get_template_part('inc/snsbtn'); // add SNS button ?>
           <div class="site-info text-center">
             <p>Copyright&copy; 2017<?php if ( '2017' != ($date = date_i18n( 'Y' )) ) { echo ' - '.$date;}?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a> All Rights Reserved.</p>

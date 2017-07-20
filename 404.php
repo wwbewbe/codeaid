@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-  <div id="primary" class="content-area col-md-9 large-9 columns">
+  <div id="primary" class="content-area col-md-12">
     <main id="main" class="site-main" role="main">
 
       <section class="error-404 not-found">
@@ -22,38 +22,10 @@ get_header(); ?>
           <p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'codeaid' ); ?></p>
 
           <?php
-            get_search_form();
-
-            the_widget( 'Widget_Recent_Posts' );
-
-            // Only show the widget if site has multiple categories.
-            if ( codeaid_categorized_blog() ) :
+//            get_search_form();
           ?>
 
-          <div class="widget widget_categories">
-            <h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'codeaid' ); ?></h2>
-            <ul>
-            <?php
-              wp_list_categories( array(
-                'orderby'    => 'count',
-                'order'      => 'DESC',
-                'show_count' => 1,
-                'title_li'   => '',
-                'number'     => 10,
-              ) );
-            ?>
-            </ul>
-          </div><!-- .widget -->
-
-          <?php
-            endif;
-
-            /* translators: %1$s: smiley */
-            $archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'codeaid' ), convert_smilies( ':)' ) ) . '</p>';
-            the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-
-            the_widget( 'WP_Widget_Tag_Cloud' );
-          ?>
+          <?php dynamic_sidebar( 'sidebar-1' ); ?>
 
           <p><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
             <?php bloginfo( 'name' ); ?>
@@ -64,6 +36,6 @@ get_header(); ?>
 
     </main><!-- #main -->
   </div><!-- #primary -->
-<?php get_sidebar(); ?>
+<?php// get_sidebar(); ?>
 <?php
 get_footer();

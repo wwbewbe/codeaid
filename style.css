@@ -1573,6 +1573,11 @@ blockquote:after {
   .bread li:last-child    {text-indent: -9999px}
 }
 
+/*404 Page Customize */
+.error-404 .entry-header {
+  text-align: center;
+}
+
 /*--------------------------------------------------------------
 ## Related Posts Menu in Content Customize
 --------------------------------------------------------------*/
