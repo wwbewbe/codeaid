@@ -3,7 +3,7 @@
  * The template for displaying front-page
  */
 get_header(); ?>
-  <div class="row front-feature">
+  <div class="row row-eq-height front-feature">
     <?php
 		$location_name = 'topicnav';
 		$locations = get_nav_menu_locations();
@@ -14,7 +14,7 @@ get_header(); ?>
 			$post = get_post( $post->object_id );
 			setup_postdata($post); ?>
 
-        <div class="col-md-4 col-sm-4">
+        <div class="col-md-4 col-sm-4 col-xs-12">
         	<a href="<?php the_permalink(); ?>">
         	<img class="topic-thumbnail" src="<?php echo get_thumbnail_url( 'full' ); ?>">
         	<h5><?php the_title() ?></h5>

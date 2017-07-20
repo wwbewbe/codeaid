@@ -2013,6 +2013,10 @@ a img            {border: none}
   padding: 0;
   border: none;
 }
+.row-eq-height {
+  display: flex;
+  flex-wrap: wrap;
+}
 /*--------------------------------------------------------------
 # Contact Form 7 Customize
 --------------------------------------------------------------*/
