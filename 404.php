@@ -15,7 +15,7 @@ get_header(); ?>
       <section class="error-404 not-found">
         <header class="page-header entry-header">
           <h1 class="page-title entry-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'codeaid' ); ?></h1>
-          <img src="<?php echo get_template_directory_uri(); ?>/img/404.png" alt="<?php echo esc_html__( 'can&rsquo;t be found...' ); ?>" />
+          <img src="<?php echo get_template_directory_uri(); ?>/img/404.jpg" alt="<?php echo esc_html__( 'can&rsquo;t be found...' ); ?>" />
         </header><!-- .page-header -->
 
         <div class="page-content">
