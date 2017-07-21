@@ -124,7 +124,7 @@ get_header(); ?>
       <div class="col-md-6 col-sm-6">
         <a href="<?php echo get_permalink( get_page_by_path( 'about' )->ID ); ?>">
           <div class="sp-thumb">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/about.png" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/about.jpg" alt="">
           </div>
           <div class="sp-text">
             <h5><?php echo esc_html__( 'About CodeAid', 'codeaid' ); ?></h5>
