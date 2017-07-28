@@ -1833,6 +1833,7 @@ blockquote:after {
   top: 0;
   left: 0;
   width: 100%;
+  max-width: 550px;
   padding: 5px 10px;
   color: #FFF;
   text-shadow: 1px 1px 3px #000;
