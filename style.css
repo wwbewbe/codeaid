@@ -1719,8 +1719,7 @@ blockquote:after {
   font-size: 0.875em;
 }
 .front-pickup,
-.front-news,
-.front-sp {
+.front-news {
   margin-top: 30px;
 }
 .front-news {
@@ -1806,14 +1805,15 @@ blockquote:after {
   font-size: 1.125rem;
 }
 
+.front-sp {
+  text-align: center;
+  margin-bottom: 10px;
+}
 .front-sp .sp-text h5 {
   font-weight: bold;
   color: #FFF;
-  font-size: 1.875rem;
+  font-size: 2.8125rem;
   margin-bottom: 5px;
-}
-.front-sp {
-  margin-bottom: 20px;
 }
 .front-sp a {
   position: relative;
@@ -1823,17 +1823,20 @@ blockquote:after {
 .front-sp a:hover {
   opacity: 0.8;
 }
-.front-sp .thumbnail {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
 .front-sp .sp-text {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  font-size: 1.875rem;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  max-width: 550px;
+  height: 100%;
   padding: 5px 10px;
   color: #FFF;
   text-shadow: 1px 1px 3px #000;
@@ -1841,7 +1844,7 @@ blockquote:after {
 
 @media only screen and (max-width: 768px) {
   .front-sp .sp-text {
-    font-size: 0.875rem;
+    font-size: 1.25rem;
   }
 }
 

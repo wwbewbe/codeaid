@@ -4,28 +4,48 @@
  */
 get_header(); ?>
   <div class="row row-eq-height front-feature">
-    <?php
-		$location_name = 'topicnav';
-		$locations = get_nav_menu_locations();
-		$myposts = wp_get_nav_menu_items( $locations[ $location_name ] );
-		if( $myposts ): ?>
-			<?php foreach($myposts as $post):
-			if(( $post->object == 'post' ) || ( $post->object == 'page' )):
-			$post = get_post( $post->object_id );
-			setup_postdata($post); ?>
 
-        <div class="col-md-4 col-sm-4 col-xs-12">
-        	<a href="<?php the_permalink(); ?>">
-        	<img class="topic-thumbnail" src="<?php echo get_thumbnail_url( 'full' ); ?>">
-        	<h5><?php the_title() ?></h5>
-          <?php the_excerpt(); ?>
-        	</a>
-        </div>
+    <div class="front-sp col-md-6 col-sm-6">
+      <?php if ( get_page_by_path( 'start' ) ) : ?>
+          <a href="<?php echo get_permalink( get_page_by_path( 'start' )->ID ); ?>">
+            <div class="sp-thumb">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/start.jpg" alt="">
+            </div>
+            <div class="sp-text">
+              <h5><?php echo apply_filters( 'the_title', get_page_by_path( 'start' )->post_title ); ?></h5>
+              <p><?php echo esc_html__( 'これだけ知っておけばプログラミング学習は怖くない。多くのプログラミングに共通したポイントを知っておくことで、無理なく学習を続けることができます。', 'codeaid' ); ?></p>
+            </div>
+          </a>
+      <?php endif; ?>
+    </div>
+    <div class="col-md-6 col-sm-6">
+      <div class="row row-eq-height">
 
-			<?php endif;
-			endforeach; ?>
-		<?php wp_reset_postdata();
-		endif; ?>
+      <?php
+  		$location_name = 'topicnav';
+  		$locations = get_nav_menu_locations();
+  		$myposts = wp_get_nav_menu_items( $locations[ $location_name ] );
+  		if( $myposts ): ?>
+  			<?php foreach($myposts as $post):
+  			if(( $post->object == 'post' ) || ( $post->object == 'page' )):
+  			$post = get_post( $post->object_id );
+  			setup_postdata($post); ?>
+
+          <div class="col-md-6 col-sm-6">
+          	<a href="<?php the_permalink(); ?>">
+          	<img class="topic-thumbnail" src="<?php echo get_thumbnail_url( 'full' ); ?>">
+          	<h5><?php the_title() ?></h5>
+            <?php the_excerpt(); ?>
+          	</a>
+          </div>
+
+  			<?php endif;
+  			endforeach; ?>
+  		<?php wp_reset_postdata();
+  		endif; ?>
+
+      </div>
+    </div>
   </div>
 
   <?php
@@ -119,33 +139,5 @@ get_header(); ?>
     </div> <!-- /front-news -->
   <?php endif; ?>
 
-  <div class="row front-sp">
-    <?php if ( get_page_by_path( 'about' ) ) : ?>
-      <div class="col-md-6 col-sm-6">
-        <a href="<?php echo get_permalink( get_page_by_path( 'about' )->ID ); ?>">
-          <div class="sp-thumb">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/about.jpg" alt="">
-          </div>
-          <div class="sp-text">
-            <h5><?php echo esc_html__( 'About CodeAid', 'codeaid' ); ?></h5>
-            <p><?php echo esc_html__( 'If you&rsquo;d like to start programming, but you do not know what to do. CodeAid support beginners who do not know what to do, support to start programming and to grow.', 'codeaid' ); ?></p>
-          </div>
-        </a>
-      </div>
-    <?php endif; ?>
-    <?php if ( get_page_by_path( 'contact' ) ) : ?>
-      <div class="col-md-6 col-sm-6">
-        <a href="<?php echo get_permalink( get_page_by_path( 'contact' )->ID ); ?>">
-          <div class="sp-thumb">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/contact.jpg" alt="">
-          </div>
-          <div class="sp-text">
-            <h5><?php echo esc_html__( 'Contact', 'codeaid' ); ?></h5>
-            <p><?php echo esc_html__( 'If you have any questions or comments, please contact me in this form.', 'codeaid' ); ?></p>
-          </div>
-        </a>
-      </div>
-    <?php endif; ?>
-  </div>
   <div id="main" class="site-main row">
 <?php get_footer(); ?>
