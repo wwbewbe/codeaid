@@ -5,14 +5,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: codeaid\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2017-07-05 09:37+0900\n"
+"POT-Creation-Date: 2017-08-01 17:35+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
-"X-Generator: Poedit 2.0.2\n"
+"X-Generator: Poedit 2.0.3\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_x:1,2c;esc_html__;esc_attr__;esc_html_e;esc_attr_e;esc_html_x:1,2c;esc_attr_x:1,2c;esc_html_nx:1,2c\n"
 "X-Poedit-Basepath: ..\n"
@@ -28,15 +28,6 @@ msgstr ""
 
 #: 404.php:22
 msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
-msgstr ""
-
-#: 404.php:34
-msgid "Most Used Categories"
-msgstr ""
-
-#: 404.php:52
-#, php-format
-msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
 #: comments.php:40 comments.php:61
@@ -55,28 +46,24 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: front-page.php:39
-msgid "Feature Posts"
-msgstr ""
-
-#: front-page.php:85
-msgid "Latest Blogs"
-msgstr ""
-
-#: front-page.php:127
-msgid "About CodeAid"
-msgstr ""
-
-#: front-page.php:128
-msgid "If you&rsquo;d like to start programming, but you do not know what to do. CodeAid support beginners who do not know what to do, support to start programming and to grow."
-msgstr ""
-
-#: front-page.php:136
+#: footer.php:30
 msgid "Contact"
 msgstr ""
 
-#: front-page.php:137
-msgid "If you have any questions or comments, please contact me in this form."
+#: footer.php:31
+msgid "About CodeAid"
+msgstr ""
+
+#: front-page.php:16
+msgid "これだけ知っておけばプログラミング学習は怖くない。多くのプログラミングに共通したポイントを知っておくことで、無理なく学習を続けることができます。"
+msgstr ""
+
+#: front-page.php:59
+msgid "Feature Posts"
+msgstr ""
+
+#: front-page.php:105
+msgid "Latest Blogs"
 msgstr ""
 
 #: functions.php:49
@@ -91,130 +78,130 @@ msgstr ""
 msgid "Add widgets here."
 msgstr ""
 
-#: functions.php:225
+#: functions.php:234
 msgid "Featured Images"
 msgstr ""
 
-#: functions.php:244
+#: functions.php:253
 msgid "None"
 msgstr ""
 
-#: functions.php:289 inc/class-widget-pickup-posts.php:49
+#: functions.php:298 inc/class-widget-pickup-posts.php:49
 msgid "Pickup Posts"
 msgstr ""
 
-#: functions.php:297
+#: functions.php:306
 msgid "Topic Posts"
 msgstr ""
 
-#: functions.php:361
+#: functions.php:370
 msgctxt "post type general name"
 msgid "Blogs"
 msgstr ""
 
-#: functions.php:362
+#: functions.php:371
 msgctxt "post type singular name"
 msgid "Blog"
 msgstr ""
 
-#: functions.php:363
+#: functions.php:372
 msgctxt "admin menu"
 msgid "Blogs"
 msgstr ""
 
-#: functions.php:364
+#: functions.php:373
 msgctxt "add new on admin bar"
 msgid "Blog"
 msgstr ""
 
-#: functions.php:365
+#: functions.php:374
 msgctxt "blog"
 msgid "Add New"
 msgstr ""
 
-#: functions.php:366
+#: functions.php:375
 msgid "Add New Blog"
 msgstr ""
 
-#: functions.php:367
+#: functions.php:376
 msgid "New Blog"
 msgstr ""
 
-#: functions.php:368
+#: functions.php:377
 msgid "Edit Blog"
 msgstr ""
 
-#: functions.php:369
+#: functions.php:378
 msgid "View Blog"
 msgstr ""
 
-#: functions.php:370
+#: functions.php:379
 msgid "All Blogs"
 msgstr ""
 
-#: functions.php:371
+#: functions.php:380
 msgid "Search Blogs"
 msgstr ""
 
-#: functions.php:372
+#: functions.php:381
 msgid "Parent Blogs:"
 msgstr ""
 
-#: functions.php:373
+#: functions.php:382
 msgid "No blogs found."
 msgstr ""
 
-#: functions.php:374
+#: functions.php:383
 msgid "No blogs found in Trash."
 msgstr ""
 
-#: functions.php:389
+#: functions.php:398
 msgctxt "taxonomy general name"
 msgid "Keywords"
 msgstr ""
 
-#: functions.php:390
+#: functions.php:399
 msgctxt "taxonomy singular name"
 msgid "Keyword"
 msgstr ""
 
-#: functions.php:391
+#: functions.php:400
 msgid "Search Keywords"
 msgstr ""
 
-#: functions.php:392
+#: functions.php:401
 msgid "All Keywords"
 msgstr ""
 
-#: functions.php:395
+#: functions.php:404
 msgid "Edit Keyword"
 msgstr ""
 
-#: functions.php:396
+#: functions.php:405
 msgid "Update Keyword"
 msgstr ""
 
-#: functions.php:397
+#: functions.php:406
 msgid "Add New Keyword"
 msgstr ""
 
-#: functions.php:398
+#: functions.php:407
 msgid "New Keyword Name"
 msgstr ""
 
-#: functions.php:399
+#: functions.php:408
 msgid "Keyword"
 msgstr ""
 
-#: header.php:71 header.php:75
+#: header.php:77 header.php:81
 msgid "This list is about posts on "
 msgstr ""
 
-#: header.php:73
+#: header.php:79
 msgid "Posts related to "
 msgstr ""
 
-#: header.php:124
+#: header.php:132
 msgid "Skip to content"
 msgstr ""
 
@@ -226,11 +213,11 @@ msgstr ""
 msgid "Pickup Posts with Thumbnail"
 msgstr ""
 
-#: inc/class-widget-pickup-posts.php:126 inc/class-widget-recent-posts.php:123
+#: inc/class-widget-pickup-posts.php:126 inc/class-widget-recent-posts.php:124
 msgid "Title:"
 msgstr ""
 
-#: inc/class-widget-pickup-posts.php:130 inc/class-widget-recent-posts.php:130
+#: inc/class-widget-pickup-posts.php:130 inc/class-widget-recent-posts.php:131
 msgid "Display post date?"
 msgstr ""
 
@@ -246,7 +233,7 @@ msgstr ""
 msgid "Recent Posts"
 msgstr ""
 
-#: inc/class-widget-recent-posts.php:126
+#: inc/class-widget-recent-posts.php:127
 msgid "Number of posts to show:"
 msgstr ""
 

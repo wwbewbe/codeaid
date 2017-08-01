@@ -806,6 +806,9 @@ a:active {
   width: 100%;
   z-index: 100;
 }
+#site-navi .col-md-12 {
+  padding: 0;
+}
 
 .header-nav {
   background-color: #529db0;
@@ -2100,15 +2103,19 @@ a img            {border: none}
 /*--------------------------------------------------------------
 # Foundation / Bootstrap Customize
 --------------------------------------------------------------*/
+/* サイトサイズ指定 */
 .row {
+  max-width: 62.5rem;
   margin-right: auto;
   margin-left: auto;
 }
+/* サムネイル画像の余白クリア */
 .thumbnail {
   margin: 0;
   padding: 0;
   border: none;
 }
+/* メニューの並びを揃える */
 .row-eq-height {
   display: flex;
   flex-wrap: wrap;

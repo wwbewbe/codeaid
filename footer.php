@@ -27,8 +27,8 @@
         <?php get_template_part('inc/snsbtn'); // add SNS button ?>
           <div class="site-info text-center">
             <p>Copyright&copy; 2017<?php if ( '2017' != ($date = date_i18n( 'Y' )) ) { echo ' - '.$date;}?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a> All Rights Reserved. |
-              <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><?php echo esc_html__( 'Contact' ); ?></a> |
-              <a href="<?php echo esc_url( home_url( '/about/' ) ); ?>"><?php echo esc_html__( 'About CodeAid' ); ?>
+              <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><?php echo esc_html__( 'Contact', 'codeaid' ); ?></a> |
+              <a href="<?php echo esc_url( home_url( '/about/' ) ); ?>"><?php echo esc_html__( 'About CodeAid', 'codeaid' ); ?>
             </p>
           </div><!-- .site-info -->
       </div>
