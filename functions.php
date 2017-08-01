@@ -41,7 +41,7 @@ function codeaid_setup() {
    * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
    */
   add_theme_support( 'post-thumbnails' );
-  add_image_size( 'latest-top-thumb', 250, 250, true );
+  add_image_size( 'latest-top-thumb', 250, 200, true );
   add_image_size( 'pickup-top-thumb', 250, 150, true );
 
   // This theme uses wp_nav_menu() in one location.
@@ -161,12 +161,12 @@ require get_template_directory() . '/inc/jetpack.php';
  */
 //概要（抜粋）の文字(単語)数(WP Multibyte Patchを使わない時に有効)※バイト数で数えているっぽい
 function my_length($length) {
-    return 120;
+    return 50;
 }
 add_filter('excerpt_length', 'my_length');
 // 抜粋欄を使用した時の抜粋文の文字制限(WP Multibyte Patchを使えば有効)
 function my_the_excerpt($myexcerpt) {
-  $myexcerpt = mb_strimwidth($myexcerpt, 0, 120, "…", "UTF-8");
+  $myexcerpt = mb_strimwidth($myexcerpt, 0, 50, "…", "UTF-8");
   return $myexcerpt;
 }
 add_filter('the_excerpt', 'my_the_excerpt');

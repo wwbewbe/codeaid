@@ -1713,10 +1713,18 @@ blockquote:after {
 ## Front Page Customize
 --------------------------------------------------------------*/
 .front-feature {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 .front-feature p {
   font-size: 0.875em;
+}
+.front-feature .col-md-6,
+.front-feature .col-sm-6 {
+  padding: 5px;
+}
+.front-pickup .col-md-3,
+.front-pickup .col-sm-3 {
+  padding: 0;
 }
 .front-pickup,
 .front-news {
@@ -1726,9 +1734,9 @@ blockquote:after {
   background-color: #d8f5f9;
   padding: 10px 0;
 }
-.front-pickup h3,
-.front-feature h3,
-.front-news h3 {
+.front-pickup h2,
+.front-feature h2,
+.front-news h2 {
   border-bottom: 1px solid #529db0;
   box-shadow: 0 1px 0 #eae2cc;
   -webkit-box-shadow: 0 1px 0 #eae2cc;
@@ -1756,8 +1764,20 @@ blockquote:after {
   overflow: hidden;
   font-size: 0.875em;
 }
+.newspost .col-sm-12 {
+  padding: 0;
+}
+.front-news .col-md-2,
+.front-news .col-sm-2 {
+  padding: 3px;
+}
 
-.news-meta {
+.front-news .news-meta h3 {
+  font-size: 0.875rem;
+  margin: 0;
+}
+.front-news .news-meta {
+  font-size: 0.75rem;
   padding: 0 5px;
 }
 
@@ -1800,16 +1820,17 @@ blockquote:after {
  background-color: rgba(0,0,0,0.5);
  color: #ffffff;
 }
-.front-pickup .pickup-text h5 {
+.front-pickup .pickup-text h3 {
   color: #FFF;
   font-size: 1.125rem;
+  margin: 0;
 }
 
 .front-sp {
   text-align: center;
   margin-bottom: 10px;
 }
-.front-sp .sp-text h5 {
+.front-sp .sp-text h3 {
   font-weight: bold;
   color: #FFF;
   font-size: 2.8125rem;
@@ -1839,7 +1860,16 @@ blockquote:after {
   height: 100%;
   padding: 5px 10px;
   color: #FFF;
-  text-shadow: 1px 1px 3px #000;
+  text-shadow: 1px 1px 2px black, 0 0 2rem white, 0 0 2rem white;
+}
+
+.front-cat .col-md-6,
+.front-cat .col-sm-6 {
+  padding: 2px;
+}
+.front-cat h3 {
+  font-size: 1.125rem;
+  margin: 0;
 }
 
 @media only screen and (max-width: 768px) {
