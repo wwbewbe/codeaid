@@ -837,7 +837,7 @@ a:active {
 
 #navbtn            {display: none}
 
-@media (min-width: 768px) {/* 大きな画面の表示 */
+@media (min-width: 992px) {/* 大きな画面の表示 */
   /* ナビゲーションメニューのリンクを横に並べる設定 */
   .header-nav li {
     float: left;
@@ -880,7 +880,7 @@ a:active {
   }
 }
 
-@media only screen and (max-width: 767px) {/* スマホ・タブレットの表示 */
+@media only screen and (max-width: 991px) {/* スマホ・タブレットの表示 */
   #small-navi {
     height: 2.5625rem;
     position: relative;
