@@ -426,11 +426,21 @@ add_action( 'init', 'create_post_type' );
  */
 function QueryListFilter($query) {
   if (!is_admin() && $query->is_main_query() && $query->is_search()) {
-
     $query->set( 'post_type', array( 'post', 'ca_blog' ) ); // 投稿記事とカスタム投稿を対象
     $query->set( 'category__not_in', array(1) ); // カテゴリが未分類の記事は非表示
-
   }
   return $query;
 }
 add_action('pre_get_posts','QueryListFilter');
+
+/**
+ * アーカイブウィジェットのカスタマイズ
+ */
+function my_widget_archives_args( $args ){
+  if ( ! is_admin() ) {
+      $args['post_type'] = 'ca_blog'; // アーカイブウィジェットはカスタム投稿タイプのみ対象
+  }
+  return $args;
+}
+add_filter( 'widget_archives_dropdown_args', 'my_widget_archives_dropdown_args' );
+add_filter( 'widget_archives_args', 'my_widget_archives_args' );
