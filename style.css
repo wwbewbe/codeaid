@@ -1781,6 +1781,9 @@ blockquote:after {
   font-size: 0.75rem;
   padding: 0 5px;
 }
+.front-news .entry-summary {
+  font-size: 0.75rem;
+}
 
 .front-sp .circle {
   text-align: center;
@@ -1870,7 +1873,7 @@ blockquote:after {
 }
 .front-cat h3 {
   font-size: 1.125rem;
-  margin: 0;
+  margin: 5px 0 0;
 }
 
 @media only screen and (max-width: 768px) {
