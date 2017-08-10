@@ -266,7 +266,7 @@ input,
 select,
 textarea {
   color: #404040;
-  font-family: -apple-system, BlinkMacSystemFont, "メイリオ", Meiryo, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", Roboto, sans-serif;
+  font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", Roboto, sans-serif;
   font-size: 1rem;
   line-height: 1.5;
 }
@@ -292,14 +292,16 @@ address {
 
 pre {
   background: #eee;
-  font-family: "Courier 10 Pitch", Courier, monospace;
-  font-size: 15px;
+  font-family: 'Ubuntu Mono', "メイリオ", Meiryo, "Courier 10 Pitch", Courier, monospace, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN";
+  color: slategray;
   font-size: 0.9375rem;
   line-height: 1.6;
-  margin-bottom: 1.6em;
+  margin-bottom: 20px;
   max-width: 100%;
   overflow: auto;
-  padding: 1.6em;
+  padding: 10px;
+  border-left: 5px solid #529db0;
+  background-color: #f2f2f2;
 }
 
 code,
@@ -307,7 +309,6 @@ kbd,
 tt,
 var {
   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-  font-size: 15px;
   font-size: 0.9375rem;
 }
 
@@ -341,7 +342,7 @@ label {
 --------------------------------------------------------------*/
 h1, h2, h3, h4, h5, h6 {
   color: #222;
-  font-family: -apple-system, BlinkMacSystemFont, "メイリオ", Meiryo, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", Roboto, sans-serif;
+  font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", Roboto, sans-serif;
   font-weight: 400;
 }
 
@@ -354,17 +355,14 @@ h4, h5 {
   font-size: 1.125em;
 }
 
-code {
-  font-family: Consolas, "Liberation Mono", Courier, monospace;
+pre code {
+  font-family: 'Ubuntu Mono', "メイリオ", Meiryo, Consolas, "Liberation Mono", Courier, monospace, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN";
   font-weight: 400;
-  color: #222;
-  font-size: 0.875em;
+  color: black;
+  font-size: 0.9375rem;
 }
-
-pre {
-  padding: 10px;
-  background-color: #f2f2f2;
-  margin-bottom: 20px;
+.code-comment {
+  color: slategray;
 }
 
 p {
@@ -1402,7 +1400,7 @@ h3.entry-title {
   position: relative;
   margin: 2em 0 1em;
   padding: 25px 20px 20px;
-  font-family: Menlo, -apple-system, BlinkMacSystemFont, Meiryo, Robot, Helvetica, sans-serif;
+  font-family: 'Ubuntu Mono', 'メイリオ', Meiryo, Robot, Helvetica, sans-serif;
   border-radius: 10px;
   background-color: #d8edf2;
   box-shadow: 5px 5px 5px #aaaaaa;
@@ -1441,7 +1439,7 @@ h3.entry-title {
   border-radius: 5px;
   background-color: #529db0;
   color: #ffffff;
-  font-family: -apple-system, BlinkMacSystemFont, Meiryo, Robot, Helvetica, sans-serif;
+  font-family: 'Ubuntu Mono', 'メイリオ', Meiryo, Robot, Helvetica, sans-serif;
   font-weight: bold;
   line-height: 1
 }
@@ -2140,7 +2138,7 @@ a img            {border: none}
 /*フォームの文字のフォント変更*/
 .wpcf7 input[type="text"], .wpcf7 input[type="number"], .wpcf7 input[type="email"], .wpcf7 input[type="tel"], .wpcf7 input[type="date"], .wpcf7 textarea {
   font-size: 14px;
-  font-family: -apple-system, BlinkMacSystemFont, 'メイリオ', 'Meiryo', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic ProN', Roboto;
+  font-family: 'メイリオ', 'Meiryo', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic ProN', Roboto;
   border: 1px solid #B9C9CE;
   border-radius: 5px;
   padding: 12px 0.8em;
@@ -2156,7 +2154,7 @@ a img            {border: none}
 .wpcf7-submit {
   text-align: center;
   width: 100px;
-  font-family: -apple-system, BlinkMacSystemFont, Meiryo, Roboto, sans-serif;
+  font-family: 'メイリオ', Meiryo, Roboto, sans-serif;
   font-size: 12px;
   color: #848483;
   padding: 15px 20px;

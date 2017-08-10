@@ -110,7 +110,7 @@ function codeaid_scripts() {
   wp_enqueue_style( 'bootstrap-style', "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" );
   wp_enqueue_style( 'codeaid-style', get_stylesheet_uri(), array(), date('U') );
   wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
-  wp_enqueue_style( 'google-font', 'https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Roboto+Slab:300,400,700|Roboto:300,400,700,900' );
+  wp_enqueue_style( 'google-font', 'https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700|Roboto+Condensed:300,400,700|Roboto+Slab:300,400,700|Roboto:300,400,700,900' );
   wp_enqueue_style( 'google-mplus1p', 'https://fonts.googleapis.com/earlyaccess/mplus1p.css' );
   wp_enqueue_style( 'google-roundedmplus1c', 'https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css' );
 
@@ -185,7 +185,7 @@ add_post_type_support( 'page', 'excerpt' );
  */
 // 編集画面の設定
 function editor_setting($init) {
-  $init[ 'block_formats' ] = 'Paragraph=p;Heading 2=h2;Heading 3=h3;Heading 4=h4;Heading 5=h5;Heading 6=h6;Preformatted=pre';
+  $init[ 'block_formats' ] = 'Paragraph=p;Heading 2=h2;Heading 3=h3;Heading 4=h4;Heading 5=h5;Heading 6=h6;Preformatted=pre;Code=code';
 
   $style_formats = array(
     array( 'title' => 'Tips info',
@@ -202,6 +202,9 @@ function editor_setting($init) {
     array( 'title' => 'Highlight-gray',
       'inline' => 'span',
       'classes' => 'highlight-gray'),
+    array( 'title' => 'Code-Comment',
+      'inline' => 'span',
+      'classes' => 'code-comment'),
     array( 'title' => '24px',
       'inline' => 'span',
       'classes' => 'font-24px'),
