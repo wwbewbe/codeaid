@@ -1301,9 +1301,9 @@ h3.entry-title {
   margin: 0.3125rem 0 0;
 }
 
-.entry-post-summary {
+.entry-summary-post {
   font-size: 1.4375rem;
-  color: gray;
+  color: dimgray;
 }
 
 .post-thumbnail {
@@ -1380,7 +1380,7 @@ h3.entry-title {
 }
 
 @media only screen and (max-width: 599px) {
-  .entry-post-summary {
+  .entry-summary-post {
     font-size: 1.125rem;
   }
   .entry-summary {

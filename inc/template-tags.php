@@ -149,3 +149,33 @@ function codeaid_post_thumbnail() {
 	<?php endif; // End is_singular()
 }
 endif;
+
+if ( ! function_exists( 'codeaid_excerpt' ) ) :
+	/**
+	 * Displays the optional excerpt.
+	 *
+	 * Wraps the excerpt in a div element.
+	 *
+	 * Create your own codeaid_excerpt() function to override in a child theme.
+	 *
+	 * @since CodeAid 1.0
+	 *
+	 * @param string $class Optional. Class string of the div element. Defaults to 'entry-summary'.
+	 */
+	function codeaid_excerpt( $class = 'entry-summary' ) {
+		$class = esc_attr( $class );
+
+		if ( has_excerpt() || is_search() ) : ?>
+      <?php if ( is_singular( array( 'post', 'ca_blog' ) ) ) : ?>
+  			<div class="entry-summary-post">
+  				<?php $post = get_post( get_the_ID() ); ?>
+          <p><?php echo $post->post_excerpt; ?></p>
+  			</div><!-- .entry-summary-post -->
+      <?php else : ?>
+        <div class="<?php echo $class; ?>">
+  				<?php the_excerpt(); ?>
+  			</div><!-- .<?php echo $class; ?> -->
+      <?php endif; ?>
+		<?php endif;
+	}
+endif;

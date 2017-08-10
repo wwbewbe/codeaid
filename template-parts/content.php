@@ -19,16 +19,14 @@
       <header class="entry-header">
         <h3 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( esc_html__( 'Permalink to %s', 'codeaid' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
 
-        <?php if ( 'page' !== get_post_type() ) : ?>
-        <div class="entry-meta">
-          <?php codeaid_posted_on(); ?>
-        </div><!-- .entry-meta -->
+        <?php if ( 'ca_blog' === get_post_type() ) : ?>
+          <div class="entry-meta">
+            <?php codeaid_posted_on(); ?>
+          </div><!-- .entry-meta -->
         <?php endif; ?>
       </header><!-- .entry-header -->
 
-      <div class="entry-summary">
-        <?php the_excerpt(); ?>
-      </div><!-- .entry-summary -->
+      <?php codeaid_excerpt(); ?>
 
       <footer class="entry-meta">
       <?php if ( 'post' == get_post_type() ) : // List category and tag text for posts ?>

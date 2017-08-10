@@ -19,14 +19,14 @@
     <div class="col-md-9 col-sm-9">
       <header class="entry-header">
         <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-        <div class="entry-meta">
-          <?php codeaid_posted_on(); ?>
-        </div><!-- .entry-meta -->
+        <?php if ( 'ca_blog' === get_post_type() ) : ?>
+          <div class="entry-meta">
+            <?php codeaid_posted_on(); ?>
+          </div><!-- .entry-meta -->
+        <?php endif; ?>
       </header><!-- .entry-header -->
 
-      <div class="entry-summary">
-        <?php the_excerpt(); ?>
-      </div><!-- .entry-summary -->
+      <?php codeaid_excerpt(); ?>
 
       <footer class="entry-footer">
         <?php codeaid_entry_footer(); ?>

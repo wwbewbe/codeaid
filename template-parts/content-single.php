@@ -30,7 +30,9 @@
     </ul>
 
     <div class="entry-meta">
-      <?php codeaid_posted_on(); ?>
+      <?php if ( 'ca_blog' === get_post_type() ) : ?>
+        <?php codeaid_posted_on(); ?>
+      <?php endif; ?>
 
       <?php
         /* translators: used between list items, there is a space after the comma */
@@ -56,7 +58,8 @@
   </header><!-- .entry-header -->
 
   <div class="entry-content">
-    <?php codeaid_post_thumbnail() ?>
+    <?php codeaid_excerpt(); ?>
+    <?php codeaid_post_thumbnail(); ?>
     <?php the_content(); ?>
     <div class="pagination-centered">
       <?php

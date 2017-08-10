@@ -35,7 +35,7 @@ get_header(); ?>
             	<a href="<?php the_permalink(); ?>">
             	<img class="topic-thumbnail" src="<?php echo get_thumbnail_url( 'full' ); ?>">
             	<h3><?php the_title() ?></h3>
-              <?php the_excerpt(); ?>
+              <?php codeaid_excerpt(); ?>
             	</a>
             </div>
 
@@ -77,7 +77,7 @@ get_header(); ?>
                         <?php the_time( 'Y/m/d' ); ?>
                       </div>
                     <?php endif; ?>
-                    <?php the_excerpt(); ?>
+                    <?php codeaid_excerpt(); ?>
                   </div>
                 </div>
             	</a>
@@ -123,7 +123,7 @@ get_header(); ?>
                             <?php the_time( 'Y/m/d' ); ?>
                           </div>
                           <h3><?php the_title(); ?></h3>
-                          <p><?php the_excerpt(); ?></p>
+                          <?php codeaid_excerpt(); ?>
                         </div>
                       </div>
                     </div>
