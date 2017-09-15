@@ -1725,7 +1725,7 @@ blockquote:after {
 }
 .front-pickup .col-md-3,
 .front-pickup .col-sm-3 {
-  padding: 0;
+  padding: 3px;
 }
 .front-pickup,
 .front-news {
@@ -1813,6 +1813,7 @@ blockquote:after {
   padding: 0;
   width: 100%;
   height: 150px;
+  border-radius: 5px;
 }
 
 .front-pickup .pickup-text {
@@ -1823,6 +1824,7 @@ blockquote:after {
  padding: 5px 10px;
  background-color: rgba(0,0,0,0.5);
  color: #ffffff;
+ border-radius: 5px;
 }
 .front-pickup .pickup-text h3 {
   color: #FFF;

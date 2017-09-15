@@ -42,7 +42,7 @@ function codeaid_setup() {
    */
   add_theme_support( 'post-thumbnails' );
   add_image_size( 'latest-top-thumb', 250, 200, true );
-  add_image_size( 'pickup-top-thumb', 250, 150, true );
+  add_image_size( 'pickup-top-thumb', 250, 300, true );
 
   // This theme uses wp_nav_menu() in one location.
   register_nav_menus( array(
