@@ -1879,7 +1879,7 @@ blockquote:after {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
 }
-.front-cat h3 {
+.catlist h3 {
   font-size: 1.125rem;
   margin: 5px 0 0;
 }
