@@ -33,9 +33,11 @@ get_header(); ?>
 
             <div class="col-md-6 col-sm-6">
             	<a href="<?php the_permalink(); ?>">
-            	<img class="topic-thumbnail" src="<?php echo get_thumbnail_url( 'full' ); ?>">
-            	<h3><?php the_title() ?></h3>
-              <?php codeaid_excerpt(); ?>
+                <div class="catlist">
+                	<img class="topic-thumbnail" src="<?php echo get_thumbnail_url( 'full' ); ?>">
+                	<h3><?php the_title() ?></h3>
+                  <?php codeaid_excerpt(); ?>
+                </div>
             	</a>
             </div>
 
