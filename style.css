@@ -1812,7 +1812,7 @@ blockquote:after {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 300px;
+  height: 250px;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -1871,6 +1871,9 @@ blockquote:after {
   color: #FFF;
   text-shadow: 1px 1px 2px black, 0 0 2rem white, 0 0 2rem white;
 }
+.sp-text p {
+  width: 700px;
+}
 
 .catlist {
   padding: 2px;
@@ -1878,6 +1881,8 @@ blockquote:after {
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
+  height: 220px;
+  margin-bottom: 5px;
 }
 .catlist h3 {
   font-size: 1.125rem;
@@ -1887,6 +1892,20 @@ blockquote:after {
 @media only screen and (max-width: 768px) {
   .front-sp .sp-text {
     font-size: 1.25rem;
+  }
+  .front-sp .sp-text h3 {
+    font-size: 2.25rem;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .front-sp .sp-text {
+    font-size: 0.75rem;
+  }
+  .front-sp .sp-text h3 {
+    font-size: 1rem;
+  }
+  .catlist {
+    height: 200px;
   }
 }
 

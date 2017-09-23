@@ -5,7 +5,7 @@
 get_header(); ?>
   <div class="row front-feature">
 
-    <div class="front-sp col-md-6 col-sm-6 col-xs-12">
+    <div class="front-sp col-md-12 col-sm-12 col-xs-12">
       <?php if ( get_page_by_path( 'start' ) ) : ?>
           <a href="<?php echo get_permalink( get_page_by_path( 'start' )->ID ); ?>">
             <div class="sp-thumb">
@@ -19,7 +19,7 @@ get_header(); ?>
       <?php endif; ?>
     </div>
 
-    <div class="front-cat col-md-6 col-sm-6 col-xs-12">
+    <div class="front-cat col-md-12 col-sm-12 col-xs-12">
       <div class="row">
         <?php
     		$location_name = 'topicnav';
@@ -31,7 +31,7 @@ get_header(); ?>
     			$post = get_post( $post->object_id );
     			setup_postdata($post); ?>
 
-            <div class="col-md-6 col-sm-6">
+            <div class="col-md-4 col-sm-4">
             	<a href="<?php the_permalink(); ?>">
                 <div class="catlist">
                 	<img class="topic-thumbnail" src="<?php echo get_thumbnail_url( 'full' ); ?>">

@@ -160,7 +160,7 @@
     <!-- #site-navigation -->
   </header>
   <!-- #masthead -->
-<?php if ( is_home() || is_front_page() ) : ?>
+<?php if ( is_home() || is_front_page() && get_header_image() ) : ?>
   <div id="main-img">
     <img src="<?php header_image(); ?>" alt="" />
     <h1 class="site-description">
