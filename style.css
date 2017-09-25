@@ -292,7 +292,7 @@ address {
 
 pre {
   background: #eee;
-  font-family: 'Ubuntu Mono', "メイリオ", Meiryo, "Courier 10 Pitch", Courier, monospace, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN";
+  font-family: Monaco, Consolas, "メイリオ", Meiryo, "Courier 10 Pitch", Courier, monospace, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN";
   color: slategray;
   font-size: 0.9375rem;
   line-height: 1.6;
@@ -308,7 +308,7 @@ code,
 kbd,
 tt,
 var {
-  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  font-family: Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
   font-size: 0.9375rem;
 }
 
@@ -356,7 +356,7 @@ h4, h5 {
 }
 
 pre code {
-  font-family: 'Ubuntu Mono', "メイリオ", Meiryo, Consolas, "Liberation Mono", Courier, monospace, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN";
+  font-family: Monaco, Consolas, "メイリオ", Meiryo, "Liberation Mono", Courier, monospace, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN";
   font-weight: 400;
   color: black;
   font-size: 0.9375rem;
