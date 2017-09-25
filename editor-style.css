@@ -58,7 +58,7 @@ h6 {
 
 pre {
   background: #eee;
-  font-family: 'Ubuntu Mono', "メイリオ", Meiryo, "Courier 10 Pitch", Courier, monospace, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN";
+  font-family: Consolas, "メイリオ", Meiryo, "Courier 10 Pitch", Courier, monospace, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN";
   color: slategray;
   font-size: 0.9375rem;
   line-height: 1.6;
@@ -72,9 +72,17 @@ pre {
 .code-comment {
   color: slategray;
 }
-
+code,
+kbd,
+tt,
+var {
+  font-family: Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  font-size: 0.9375rem;
+  background-color: transparent;
+  color: black;
+}
 pre code {
-  font-family: 'Ubuntu Mono', "メイリオ", Meiryo, Consolas, "Liberation Mono", Courier, monospace, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN";
+  font-family: Consolas, "メイリオ", Meiryo, Consolas, "Liberation Mono", Courier, monospace, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN";
   font-weight: 400;
   color: black;
   font-size: 0.9375rem;

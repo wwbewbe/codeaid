@@ -292,7 +292,7 @@ address {
 
 pre {
   background: #eee;
-  font-family: Monaco, Consolas, "メイリオ", Meiryo, "Courier 10 Pitch", Courier, monospace, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN";
+  font-family: Consolas, "メイリオ", Meiryo, "Courier 10 Pitch", Courier, monospace, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN";
   color: slategray;
   font-size: 0.9375rem;
   line-height: 1.6;
@@ -310,6 +310,8 @@ tt,
 var {
   font-family: Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
   font-size: 0.9375rem;
+  background-color: transparent;
+  color: black;
 }
 
 abbr,
@@ -356,7 +358,7 @@ h4, h5 {
 }
 
 pre code {
-  font-family: Monaco, Consolas, "メイリオ", Meiryo, "Liberation Mono", Courier, monospace, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN";
+  font-family: Consolas, "メイリオ", Meiryo, "Liberation Mono", Courier, monospace, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN";
   font-weight: 400;
   color: black;
   font-size: 0.9375rem;
@@ -1245,6 +1247,10 @@ h3.entry-title {
   padding-bottom: 5px;
   border-bottom: solid 2px #529db0;
   clear: both
+}
+h2 > span {
+  margin-top : -100px;
+  padding-top : 100px;
 }
 
 .entry-content h3 {
