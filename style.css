@@ -293,7 +293,7 @@ address {
 pre {
   background: #eee;
   font-family: Consolas, "メイリオ", Meiryo, "Courier 10 Pitch", Courier, monospace, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN";
-  color: slategray;
+  color: #529db0;
   font-size: 0.9375rem;
   line-height: 1.6;
   margin-bottom: 20px;
@@ -364,7 +364,7 @@ pre code {
   font-size: 0.9375rem;
 }
 .code-comment {
-  color: slategray;
+  color: #df871b;
 }
 
 p {
@@ -1406,7 +1406,7 @@ h2 > span {
   position: relative;
   margin: 2em 0 1em;
   padding: 25px 20px 20px;
-  font-family: 'Ubuntu Mono', 'メイリオ', Meiryo, Robot, Helvetica, sans-serif;
+  font-family: Consolas, 'メイリオ', Meiryo, Robot, Helvetica, sans-serif;
   border-radius: 10px;
   background-color: #d8edf2;
   box-shadow: 5px 5px 5px #aaaaaa;
