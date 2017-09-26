@@ -1248,7 +1248,7 @@ h3.entry-title {
   border-bottom: solid 2px #529db0;
   clear: both
 }
-h2 > span {
+.entry-content h2 > span {
   margin-top : -100px;
   padding-top : 100px;
 }
@@ -1270,6 +1270,9 @@ h2 > span {
   margin-bottom: 5px;
 }
 
+.entry-content a {
+  text-decoration: underline;
+}
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
