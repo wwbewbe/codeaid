@@ -1835,11 +1835,11 @@ blockquote:after {
  width: 100%;
  padding: 5px 10px;
  background-color: rgba(0,0,0,0.5);
- color: #ffffff;
+ color: lightblue;
  border-radius: 5px;
 }
 .front-pickup .pickup-text h3 {
-  color: #FFF;
+  color: azure;
   font-size: 1.125rem;
   margin: 0;
 }
