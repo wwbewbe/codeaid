@@ -447,3 +447,14 @@ function my_widget_archives_args( $args ){
 }
 add_filter( 'widget_archives_dropdown_args', 'my_widget_archives_dropdown_args' );
 add_filter( 'widget_archives_args', 'my_widget_archives_args' );
+
+/**
+ * セルプピンバックの無効化
+ */
+function no_self_ping( &$links ) {
+  $home = get_option( 'home' );
+  foreach ( $links as $l => $link )
+    if ( 0 === strpos( $link, $home ) )
+      unset($links[$l]);
+}
+add_action( 'pre_ping', 'no_self_ping' );
