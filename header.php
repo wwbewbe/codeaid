@@ -11,7 +11,7 @@
 
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
-<head prefix="og: http://ogp.me/ns#">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 
 <title>
@@ -87,6 +87,7 @@
 <meta property="og:locale:alternate" content="en_US">
 <meta property="og:locale:alternate" content="en_GB">
 <meta property="og:locale:alternate" content="zh_TW">
+<meta property="fb:app_id" content="2002804263297057">
 
 <link rel="shortcut icon" type="image/x-icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon.ico" />
 
