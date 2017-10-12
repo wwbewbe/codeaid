@@ -88,6 +88,8 @@
 <meta property="og:locale:alternate" content="en_GB">
 <meta property="og:locale:alternate" content="zh_TW">
 <meta property="fb:app_id" content="2002804263297057">
+<meta name="twitter:site" content="@CodeAid2017">
+<meta name="twitter:creator" content="@CodeAid2017">
 
 <link rel="shortcut icon" type="image/x-icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon.ico" />
 
