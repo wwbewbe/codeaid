@@ -1167,6 +1167,10 @@ a:active {
   line-height: 1.2;
   padding: 5px 0;
 }
+.widget_pickup_entries li,
+.widget_recent_entries li {
+  border-bottom: 1px dotted gainsboro;
+}
 .widget .widget-title,
 .widget .widgettitle {
   border-bottom: 1px solid #529db0;
