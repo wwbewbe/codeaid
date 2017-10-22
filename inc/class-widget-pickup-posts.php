@@ -77,7 +77,7 @@ class Widget_Pickup_Posts extends WP_Widget {
         <div class="pickup-thumb" style="background-image: url(<?php echo get_thumbnail_url( 'medium' ); ?>)"></div>
         <div class="pickup-text"><?php echo $nav_title; // ナビゲーションラベル名使用 get_the_title() ? the_title() : the_ID(); ?>
           <?php if ( $show_date ) : ?>
-            <div class="post-date"><?php echo get_the_date(); ?></div>
+            <div class="post-date"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i><?php echo get_the_date(); ?></div>
           <?php endif; ?>
         </div>
         </a>
