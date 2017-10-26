@@ -1209,7 +1209,8 @@ a:active {
   padding-top: 20px;
 }
 
-article.post {
+article.post,
+article.ca_blog {
   margin-bottom: 30px;
   border-bottom: 1px solid #ccc;
   padding-bottom: 20px;

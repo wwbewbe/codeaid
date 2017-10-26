@@ -39,17 +39,17 @@
           <?php printf( '%1$s', $categories_list ); ?>
         </span>
         <?php endif; // End if categories ?>
+      <?php endif; // End if 'post' == get_post_type() ?>
 
-        <?php
-          /* translators: used between list items, there is a space after the comma */
-          $tags_list = get_the_tag_list( '', esc_html__( ' ', 'codeaid' ) );
-          if ( $tags_list ) :
-        ?>
+      <?php
+        /* translators: used between list items, there is a space after the comma */
+        $tags_list = get_the_tag_list( '', esc_html__( ' ', 'codeaid' ) );
+        if ( $tags_list ) :
+      ?>
         <span class="tags-links">
           <?php printf( '<i class="fa fa-tags fa-fw" aria-hidden="true"></i>%1$s', $tags_list ); ?>
         </span>
-        <?php endif; // End if $tags_list ?>
-      <?php endif; // End if 'post' == get_post_type() ?>
+      <?php endif; // End if $tags_list ?>
 
       <?php edit_post_link( esc_html__( 'Edit', 'codeaid' ), '<span class="edit-link">', '</span>' ); ?>
       </footer><!-- .entry-meta -->
