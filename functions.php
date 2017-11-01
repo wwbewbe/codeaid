@@ -94,7 +94,17 @@ function codeaid_widgets_init() {
   register_sidebar( array(
     'name'          => esc_html__( 'Sidebar', 'codeaid' ),
     'id'            => 'sidebar-1',
-    'description'   => esc_html__( 'Add widgets here.', 'codeaid' ),
+    'description'   => esc_html__( 'Add widgets here to appear in sidebar.', 'codeaid' ),
+    'before_widget' => '<section id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h2 class="widget-title">',
+    'after_title'   => '</h2>',
+  ) );
+
+  register_sidebar( array(
+    'name'          => esc_html__( 'Content Bottom 1', 'codeaid' ),
+    'id'            => 'sidebar-2',
+    'description'   => esc_html__( 'Appears at the bottom of the content on front page.', 'codeaid' ),
     'before_widget' => '<section id="%1$s" class="widget %2$s">',
     'after_widget'  => '</section>',
     'before_title'  => '<h2 class="widget-title">',

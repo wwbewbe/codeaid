@@ -100,6 +100,16 @@ get_header(); ?>
 
 	<?php endif; ?>
 
+  <div class="front-parts">
+    <div class="row">
+      <div class="col-md-12">
+        <?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
+          <?php dynamic_sidebar( 'sidebar-2' ); ?>
+        <?php endif; ?>
+      </div>
+    </div><!-- /row -->
+  </div><!-- /front-parts -->
+
   <?php
   $args = array(
     'post_type' => 'ca_blog',
