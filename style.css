@@ -1717,8 +1717,6 @@ blockquote:after {
 .widget_pickup_entries li a {
   position: relative;
   display: block;
-  font-size: 0.75rem;
-  line-height: 0.75rem;
 }
 
 .widget_pickup_entries li a:hover {
@@ -1727,7 +1725,7 @@ blockquote:after {
 
 .widget_pickup_entries li .pickup-thumb {
   width: 100%;
-  height: 80px;
+  height: 132px;
   background-size: cover;
   background-position: 50% 50%;
 }
@@ -1736,13 +1734,11 @@ blockquote:after {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 50%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.5);
-  color: #000000;
-  -moz-box-siging: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 1.125rem;
+  padding: 3px;
 }
 
 /*--------------------------------------------------------------
