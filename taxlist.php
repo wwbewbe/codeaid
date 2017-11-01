@@ -9,6 +9,12 @@
 		'paged' => $paged,
   );
 	if ( $list ) $args += array( 'posts_per_page' => $list ); // リスト数を指定
+	if ( ($posttype == 'post') || (in_array('post', $posttype)) ) {
+		$args += array(
+			'orderby' => 'title', // タイトル順に表示
+			'order'   => 'ASC', // 昇順で表示
+		);
+	}
 	?>
 	<?php $the_query = new WP_Query( $args ); ?>
 
