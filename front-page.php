@@ -59,7 +59,7 @@ get_header(); ?>
     <div class="row front-pickup">
       <div class="col-md-12">
         <h2><?php echo esc_html__( 'Feature Posts', 'codeaid' ); ?></h2>
-        <div class="row">
+        <div class="row row-eq-height">
       		<?php foreach($myposts as $post):
       		if(( $post->object == 'post' ) || ( $post->object == 'page' )):
       		$post = get_post( $post->object_id );
@@ -67,21 +67,27 @@ get_header(); ?>
 
             <div class="col-md-3 col-sm-3 col-xs-12">
             	<a href="<?php the_permalink(); ?>">
+                <div class="pickup-post">
                 <div class="row">
-                  <div class="pickup-thumb col-md-12 col-sm-12 col-xs-5">
-            	      <img src="<?php echo get_thumbnail_url( 'pickup-top-thumb' ); ?>">
+                  <div class="col-sm-12 col-xs-5">
+                    <div class="pickup-thumb">
+            	         <img src="<?php echo get_thumbnail_url( 'pickup-top-thumb' ); ?>">
+                    </div>
                   </div>
-                  <div class="pickup-text col-md-12 col-sm-12 col-xs-7">
-                    <h3><?php the_title() ?></h3>
-                    <?php if ( is_singular( 'ca_blog' ) ) :?>
-                      <div class="date">
-                        <i class="fa fa-pencil fa-fw" aria-hidden="true"></i>
-                        <?php the_time( 'Y/m/d' ); ?>
-                      </div>
-                    <?php endif; ?>
-                    <?php codeaid_excerpt(); ?>
+                  <div class="col-sm-12 col-xs-7">
+                    <div class="pickup-text">
+                      <h3><?php the_title() ?></h3>
+                      <?php if ( is_singular( 'ca_blog' ) ) :?>
+                        <div class="date">
+                          <i class="fa fa-pencil fa-fw" aria-hidden="true"></i>
+                          <?php the_time( 'Y/m/d' ); ?>
+                        </div>
+                      <?php endif; ?>
+                      <?php codeaid_excerpt(); ?>
+                    </div>
                   </div>
-                </div>
+                </div><!-- /row -->
+                </div><!-- /pickup-post -->
             	</a>
             </div>
 

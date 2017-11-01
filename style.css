@@ -1748,6 +1748,13 @@ blockquote:after {
 /*--------------------------------------------------------------
 ## Front Page Customize
 --------------------------------------------------------------*/
+/* Grid system customize */
+/* グリッドの列を上揃にする */
+.row-eq-height {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .front-feature {
   margin-top: 20px;
 }
@@ -1783,7 +1790,6 @@ blockquote:after {
   margin-top: 10px;
   font-size: 12px;
 }
-.front-feature img,
 .front-news .thumbnail img {
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -1832,7 +1838,7 @@ blockquote:after {
  * For overlay thumbnail & text for front-pickup & front-sp
  */
 .front-pickup a {
- position: relative;
+/* position: relative;*/
  padding: 0;
  display: block;
  font-size: 0.75rem;
@@ -1842,27 +1848,28 @@ blockquote:after {
  opacity: 0.8;
 }
 
-.front-pickup .pickup-thumb,
-.front-pickup .pickup-thumb img {
+.pickup-post {
   margin: 0;
-  padding: 0;
+  padding: 5px;
   width: 100%;
-  height: 250px;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
   box-shadow: 3px 3px 20px rgba(0,0,0,0.4);
+  background-color: rgba(0,0,0,0.5);
+}
+.pickup-post .col-sm-12 {
+  padding: 0;
+}
+
+.front-pickup .pickup-thumb img {
+  height: 150px;
 }
 
 .front-pickup .pickup-text {
- position: absolute;
+/* position: absolute;*/
  bottom: 0;
  left: 0;
  width: 100%;
  padding: 5px 10px;
- background-color: rgba(0,0,0,0.5);
  color: lightblue;
- border-radius: 5px;
 }
 .front-pickup .pickup-text h3 {
   color: azure;
