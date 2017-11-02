@@ -441,17 +441,12 @@ function query_filter($query) {
   if ( is_admin() || ! $query->is_main_query() )
         return;
 
-  if ( $query->is_search() ) { // 検索結果表示
+  if ( $query->is_search() || $query->is_archive() ) { // 検索結果もしくはアーカイブ表示
     $query->set( 'post_type', array( 'post', 'ca_blog' ) ); // 投稿記事とカスタム投稿を対象
     $query->set( 'category__not_in', array(1) ); // カテゴリが未分類の記事は非表示
     $query->set( 'orderby', 'title' ); // 名前順に表示
     $query->set( 'order', 'ASC' ); // 昇順で表示
     $query->set( 'posts_per_page', -1 ); // １ページに全て表示
-  }
-
-  if ( $query->is_singular( 'post' ) || $query->is_page() ) {
-    $query->set( 'orderby', 'title' ); // ブログ以外の投稿は名前順に表示
-    $query->set( 'order', 'ASC' ); // 投稿を昇順で表示
   }
 
   return;
