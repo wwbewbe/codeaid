@@ -38,6 +38,17 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-
+<script>
+  jQuery(function () {
+    var headerHight = 50; //ヘッダの高さ
+    jQuery('a[href^=#]').click(function(){
+      var href= jQuery(this).attr("href");
+      var target = jQuery(href == "#" || href == "" ? 'html' : href);
+      var position = target.offset().top - headerHight; //ヘッダの高さ分位置をずらす
+      jQuery("html, body").animate({scrollTop:position}, 550, "swing");
+      return false;
+    });
+  });
+</script>
 </body>
 </html>
