@@ -40,6 +40,14 @@
 <?php wp_footer(); ?>
 
 <script>
+  jQuery(function(){
+    jQuery('img').attr('onmousedown', 'return false');
+    jQuery('img').attr('onselectstart', 'return false');
+    jQuery('img').attr('oncontextmenu', 'return false');
+  });
+</script>
+
+<script>
   jQuery(function () {
     var headerHight = 50; //ヘッダの高さ
     jQuery('a[href^=#]').click(function(){

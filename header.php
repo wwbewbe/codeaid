@@ -100,14 +100,6 @@
 
 <?php wp_head(); ?>
 
-<script>
-  jQuery(function(){
-    jQuery('img').attr('onmousedown', 'return false');
-    jQuery('img').attr('onselectstart', 'return false');
-    jQuery('img').attr('oncontextmenu', 'return false');
-  });
-</script>
-
 <!-- Global Site Tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75719561-7"></script>
 <script>
