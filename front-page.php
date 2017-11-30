@@ -14,6 +14,7 @@ get_header(); ?>
             <div class="sp-text">
               <h3><?php echo apply_filters( 'the_title', get_page_by_path( 'start' )->post_title ); ?></h3>
               <p><?php echo esc_html__( 'これだけ知っておけばプログラミング学習は怖くない。多くのプログラミングに共通したポイントを知っておくことで、無理なく学習を続けることができます。', 'codeaid' ); ?></p>
+              <p><i class="fa fa-hand-o-up fa-fw" aria-hidden="true"></i><?php echo esc_html__( '記事を読む', 'codeaid' ); ?></p>
             </div>
           </a>
       <?php endif; ?>
