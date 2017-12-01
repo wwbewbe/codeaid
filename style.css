@@ -1352,7 +1352,7 @@ h3.entry-title {
 .cat-links,
 .tags-links,
 .tagcloud {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
 }
 
 .entry-tax {
@@ -1402,11 +1402,14 @@ h3.entry-title {
 
 .cat-links a	{
   margin-right: 5px;
-  margin-bottom: 2px;
-  padding: 3px 5px;
-  border-radius: 2px;
+  margin-bottom: 5px;
+  padding: 0 5px;
+  border-radius: 3px;
   background-color: #9c9c9c;
   color: #ffffff;
+  text-decoration: none;
+	-webkit-transition: .2s;
+	transition: .2s;
 }
 .cat-links a:hover	{
   background-color: #529db0;
