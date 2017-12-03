@@ -12,9 +12,9 @@ if ( ! function_exists( 'codeaid_posted_on' ) ) :
  * Prints HTML with meta information for the current post-date/time and author.
  */
 function codeaid_posted_on() {
-  $time_string = '<i class="fa fa-pencil fa-fw" aria-hidden="true"></i><time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+  $time_string = '<i class="fa fa-clock-o fa-fw" aria-hidden="true"></i><time class="entry-date published updated" datetime="%1$s">%2$s</time>';
   if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-    $time_string = '<i class="fa fa-pencil fa-fw" aria-hidden="true"></i><time class="entry-date published" datetime="%1$s">%2$s</time> | <i class="fa fa-pencil-square-o fa-fw" aria-hidden="true"></i><time class="updated" datetime="%3$s">%4$s</time>';
+    $time_string = '<i class="fa fa-clock-o fa-fw" aria-hidden="true"></i><time class="entry-date published" datetime="%1$s">%2$s</time> | <i class="fa fa-history fa-fw" aria-hidden="true"></i><time class="updated" datetime="%3$s">%4$s</time>';
   }
 
   $time_string = sprintf( $time_string,
