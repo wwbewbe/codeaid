@@ -53,12 +53,20 @@ get_header(); ?>
         $catkwds[] = $cat->term_id;
       }
     } ?>
+    <?php if( has_tag() ) { // Related posts menu on each post
+      $tags = get_the_tags();
+      $tagkwds = array();
+      foreach($tags as $tag) {
+        $tagkwds[] = $tag->term_id;
+      }
+    } ?>
     <?php
     $args = array(
-      'post_type' => 'post',
+      'post_type' => array( 'post', 'ca_blog' ),
       'posts_per_page' => '4',
       'post__not_in' => array( $post->ID ),
       'category__in' => $catkwds,
+      'tag__in' => $tagkwds,
       'orderby' => 'rand'
     );
     $the_query = new WP_Query($args);

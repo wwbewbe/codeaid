@@ -4,15 +4,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: codeaid\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2017-08-01 17:30+0900\n"
-"PO-Revision-Date: 2017-09-16 00:01+0900\n"
+"POT-Creation-Date: 2017-12-04 18:03+0900\n"
+"PO-Revision-Date: 2017-12-04 18:04+0900\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.3\n"
+"X-Generator: Poedit 2.0.4\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_x:1,2c;esc_html__;esc_attr__;esc_html_e;"
 "esc_attr_e;esc_html_x:1,2c;esc_attr_x:1,2c;esc_html_nx:1,2c\n"
@@ -64,11 +64,15 @@ msgid ""
 "したポイントを知っておくことで、無理なく学習を続けることができます。"
 msgstr ""
 
-#: front-page.php:59
+#: front-page.php:17
+msgid "記事を読む"
+msgstr ""
+
+#: front-page.php:62
 msgid "Feature Posts"
 msgstr "ピックアップ"
 
-#: front-page.php:105
+#: front-page.php:124
 msgid "Latest Blogs"
 msgstr "ブログ"
 
@@ -81,133 +85,141 @@ msgid "Sidebar"
 msgstr "サイドバー"
 
 #: functions.php:97
-msgid "Add widgets here."
+msgid "Add widgets here to appear in sidebar."
 msgstr "ウィジェットをここに追加"
 
-#: functions.php:234
+#: functions.php:105
+msgid "Content Bottom 1"
+msgstr ""
+
+#: functions.php:107
+msgid "Appears at the bottom of the content on front page."
+msgstr ""
+
+#: functions.php:247
 msgid "Featured Images"
 msgstr "おすすめ画像"
 
-#: functions.php:253
+#: functions.php:266
 msgid "None"
 msgstr "なし"
 
-#: functions.php:298 inc/class-widget-pickup-posts.php:49
+#: functions.php:311 inc/class-widget-pickup-posts.php:49
 msgid "Pickup Posts"
 msgstr "ピックアップ"
 
-#: functions.php:306
+#: functions.php:319
 msgid "Topic Posts"
 msgstr "トピック"
 
-#: functions.php:370
+#: functions.php:383
 msgctxt "post type general name"
 msgid "Blogs"
 msgstr "ブログ"
 
-#: functions.php:371
+#: functions.php:384
 msgctxt "post type singular name"
 msgid "Blog"
 msgstr "ブログ"
 
-#: functions.php:372
+#: functions.php:385
 msgctxt "admin menu"
 msgid "Blogs"
 msgstr "ブログ"
 
-#: functions.php:373
+#: functions.php:386
 msgctxt "add new on admin bar"
 msgid "Blog"
 msgstr "ブログ"
 
-#: functions.php:374
+#: functions.php:387
 msgctxt "blog"
 msgid "Add New"
 msgstr "新規追加"
 
-#: functions.php:375
+#: functions.php:388
 msgid "Add New Blog"
 msgstr "新規ブログ追加"
 
-#: functions.php:376
+#: functions.php:389
 msgid "New Blog"
 msgstr "新規ブログ"
 
-#: functions.php:377
+#: functions.php:390
 msgid "Edit Blog"
 msgstr "ブログ編集"
 
-#: functions.php:378
+#: functions.php:391
 msgid "View Blog"
 msgstr "ブログ一覧"
 
-#: functions.php:379
+#: functions.php:392
 msgid "All Blogs"
 msgstr "全てのブログ"
 
-#: functions.php:380
+#: functions.php:393
 msgid "Search Blogs"
 msgstr "ブログを検索"
 
-#: functions.php:381
+#: functions.php:394
 msgid "Parent Blogs:"
 msgstr "親ブログ:"
 
-#: functions.php:382
+#: functions.php:395
 msgid "No blogs found."
 msgstr "ブログはありません。"
 
-#: functions.php:383
+#: functions.php:396
 msgid "No blogs found in Trash."
 msgstr "ゴミ箱にブログはありません。"
 
-#: functions.php:398
+#: functions.php:411
 msgctxt "taxonomy general name"
 msgid "Keywords"
 msgstr "キーワード"
 
-#: functions.php:399
+#: functions.php:412
 msgctxt "taxonomy singular name"
 msgid "Keyword"
 msgstr "キーワード"
 
-#: functions.php:400
+#: functions.php:413
 msgid "Search Keywords"
 msgstr "キーワードを検索"
 
-#: functions.php:401
+#: functions.php:414
 msgid "All Keywords"
 msgstr "全てのキーワード"
 
-#: functions.php:404
+#: functions.php:417
 msgid "Edit Keyword"
 msgstr "キーワードを編集"
 
-#: functions.php:405
+#: functions.php:418
 msgid "Update Keyword"
 msgstr "キーワードをアップデート"
 
-#: functions.php:406
+#: functions.php:419
 msgid "Add New Keyword"
 msgstr "新規キーワードを追加"
 
-#: functions.php:407
+#: functions.php:420
 msgid "New Keyword Name"
 msgstr "新規キーワード名"
 
-#: functions.php:408
+#: functions.php:421
 msgid "Keyword"
 msgstr "キーワード"
 
-#: header.php:77 header.php:81
+#: header.php:81 header.php:85
 msgid "This list is about posts on "
 msgstr "一覧 "
 
-#: header.php:79
+#: header.php:83
 msgid "Posts related to "
 msgstr "関連投稿 "
 
-#: header.php:132
+#: header.php:117
 msgid "Skip to content"
 msgstr "内容をスキップ"
 
@@ -250,8 +262,8 @@ msgid "%s"
 msgstr "%s"
 
 #: inc/template-tags.php:46 inc/template-tags.php:52
-#: template-parts/content-single.php:37 template-parts/content.php:37
-#: template-parts/content.php:47
+#: template-parts/content-single.php:39 template-parts/content.php:35
+#: template-parts/content.php:46
 msgid " "
 msgstr ""
 
@@ -261,7 +273,7 @@ msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
 
 #: inc/template-tags.php:68 template-parts/content-page.php:34
-#: template-parts/content-single.php:76
+#: template-parts/content-single.php:79
 #, php-format
 msgid "Edit %s"
 msgstr "編集 %s"
@@ -271,9 +283,9 @@ msgstr "編集 %s"
 msgid "Search Results for: %s"
 msgstr "検索結果: %s"
 
-#: single.php:68
+#: single.php:76
 msgid "Related Posts"
-msgstr "関連記事"
+msgstr "同時に読まれている記事"
 
 #: template-parts/content-none.php:14
 msgid "Nothing Found"
@@ -298,7 +310,7 @@ msgid ""
 "searching can help."
 msgstr "探している記事は見つかりませんでした。これらを参考にしてください。"
 
-#: template-parts/content-page.php:22 template-parts/content-single.php:64
+#: template-parts/content-page.php:22 template-parts/content-single.php:67
 msgid "Pages:"
 msgstr "ページ:"
 
@@ -308,12 +320,12 @@ msgstr "ページ:"
 msgid "Permalink to %s"
 msgstr "パーマリンク%s"
 
-#: template-parts/content-single.php:39
+#: template-parts/content-single.php:41
 #, php-format
 msgid "%1$s "
 msgstr "%1$s "
 
-#: template-parts/content.php:56
+#: template-parts/content.php:54
 msgid "Edit"
 msgstr "編集"
 
