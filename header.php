@@ -118,12 +118,15 @@
 
   <header id="masthead" class="site-header" role="banner">
     <div class="row">
-      <div class="site-branding col-md-12">
+      <div class="site-branding col-sm-6">
         <h1 class="site-logo">
           <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
             <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="codeaid" />
           </a>
         </h1>
+      </div>
+      <div class="site-subtitle col-sm-6">
+        プログラミング学習応援サイト
       </div>
     </div>
     <div id="site-navi" class="main-navi">
