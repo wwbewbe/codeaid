@@ -146,6 +146,18 @@
       </div>
     </div>
     <!-- #site-navigation -->
+    <?php if ( ! is_home() && ! is_front_page()  ) : ?>
+      <div class="row">
+        <div class="school-banner col-md-12 col-sm-12 col-xs-12">
+            <a href="https://codeaid.jp/school">
+              <div class="school-banner">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/school-banner.jpg" alt="">
+              </div>
+            </a>
+        </div>
+      </div>
+    <?php endif; ?>
+    <!-- #school-banner -->
   </header>
   <!-- #masthead -->
 <?php if ( is_home() || is_front_page() && get_header_image() ) : ?>
