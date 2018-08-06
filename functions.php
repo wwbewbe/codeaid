@@ -466,7 +466,7 @@ add_filter( 'widget_archives_dropdown_args', 'my_widget_archives_dropdown_args' 
 add_filter( 'widget_archives_args', 'my_widget_archives_args' );
 
 /**
- * セルプピンバックの無効化
+ * セルフピンバックの無効化
  */
 function no_self_ping( &$links ) {
   $home = get_option( 'home' );
@@ -475,3 +475,8 @@ function no_self_ping( &$links ) {
       unset($links[$l]);
 }
 add_action( 'pre_ping', 'no_self_ping' );
+
+/**
+ * Link:のヘッダーレスポンスを削除
+ */
+remove_action('template_redirect','wp_shortlink_header', 11, 0);
