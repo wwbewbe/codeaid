@@ -266,7 +266,7 @@ input,
 select,
 textarea {
   color: #404040;
-  font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", Roboto, sans-serif;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, "メイリオ", Meiryo, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", sans-serif;
   font-size: 1rem;
   line-height: 1.5;
 }
@@ -1923,9 +1923,10 @@ blockquote:after {
   height: 100%;
   padding: 5px 10px;
   color: #FFF;
-  text-shadow: 1px 1px 2px black, 0 0 2rem white, 0 0 2rem white;
+/*  text-shadow: 1px 1px 2px black, 0 0 2rem white, 0 0 2rem white;*/
 }
 .sp-text p {
+  font-size: 1rem;
   width: 700px;
 }
 
