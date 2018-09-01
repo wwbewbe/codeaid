@@ -1766,7 +1766,11 @@ blockquote:after {
   display: flex;
   flex-wrap: wrap;
 }
-
+.row-eq-height .col-md-3{
+  display: flex;
+  flex-wrap: wrap;
+  width:24.9%;
+}
 .front-feature {
   margin-top: 20px;
 }
