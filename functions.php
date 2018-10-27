@@ -171,12 +171,12 @@ require get_template_directory() . '/inc/jetpack.php';
  */
 //概要（抜粋）の文字(単語)数(WP Multibyte Patchを使わない時に有効)※バイト数で数えているっぽい
 function my_length($length) {
-    return 100;
+    return 50;
 }
 add_filter('excerpt_length', 'my_length');
 // 抜粋欄を使用した時の抜粋文の文字制限(WP Multibyte Patchを使えば有効)
 function my_the_excerpt($myexcerpt) {
-  $myexcerpt = mb_strimwidth($myexcerpt, 0, 100, "…", "UTF-8");
+  $myexcerpt = mb_strimwidth($myexcerpt, 0, 50, "…", "UTF-8");
   return $myexcerpt;
 }
 add_filter('the_excerpt', 'my_the_excerpt');

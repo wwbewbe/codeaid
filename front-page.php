@@ -60,7 +60,7 @@ get_header(); ?>
     <div class="row front-pickup">
       <div class="col-md-12">
         <h2><?php echo esc_html__( 'Feature Posts', 'codeaid' ); ?></h2>
-        <div class="row row-eq-height">
+        <div class="row">
       		<?php foreach($myposts as $post):
       		if(( $post->object == 'post' ) || ( $post->object == 'page' )):
       		$post = get_post( $post->object_id );
@@ -70,12 +70,12 @@ get_header(); ?>
             	<a href="<?php the_permalink(); ?>">
                 <div class="pickup-post">
                 <div class="row">
-                  <div class="col-sm-12 col-xs-5">
+                  <div class="col-sm-12 col-xs-7">
                     <div class="pickup-thumb">
             	         <img src="<?php echo get_thumbnail_url( 'pickup-top-thumb' ); ?>">
                     </div>
                   </div>
-                  <div class="col-sm-12 col-xs-7">
+                  <div class="col-sm-12 col-xs-5">
                     <div class="pickup-text">
                       <h3><?php the_title() ?></h3>
                       <?php if ( is_singular( 'ca_blog' ) ) :?>
@@ -84,7 +84,7 @@ get_header(); ?>
                           <?php the_time( 'Y/m/d' ); ?>
                         </div>
                       <?php endif; ?>
-                      <?php codeaid_excerpt(); ?>
+                      <?php //codeaid_excerpt(); ?>
                     </div>
                   </div>
                 </div><!-- /row -->
