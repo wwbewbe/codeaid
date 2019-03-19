@@ -14,12 +14,5 @@
       <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
     </span>
   </a></li>
-  <li><a href="https://plus.google.com/share?url=<?php echo urlencode( get_permalink() ); ?>"
-  onclick="window.open(this.href, 'SNS', 'width=500, height=500, menubar=no, toolbar=no, scrollbars=yes'); return false;" class="share-gp">
-    <span class="fa-stack fa-lg">
-      <i class="fa fa-circle fa-stack-2x" style="color:#dd4b39"></i>
-      <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
-    </span>
-  </a></li>
   </ul>
 </div><!-- end share -->
