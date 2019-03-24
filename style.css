@@ -362,6 +362,7 @@ pre code {
   font-weight: 400;
   color: lightgray;
   font-size: 0.9375rem;
+  white-space: pre;
 }
 .code-comment {
   color: #df871b;
