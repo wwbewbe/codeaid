@@ -9,12 +9,13 @@
 		'paged' => $paged,
   );
 	if ( $list ) $args += array( 'posts_per_page' => $list ); // リスト数を指定
-	if ( ($posttype == 'post') || (in_array('post', (array)$posttype)) ) {
+	//if ( ($posttype == 'post') || (in_array('post', (array)$posttype)) ) {
 		$args += array(
-			'orderby' => 'rand', // タイトル順に表示
-			'order'   => 'ASC', // 昇順で表示
+			//'orderby' => array( 'modified' => 'DESC', 'date' => 'DESC' ), // 更新日順に表示
+			'orderby' => 'modified date', // 更新日順に表示
+			'order'   => 'DESC', // 降順で表示
 		);
-	}
+	//}
 	?>
 	<?php $the_query = new WP_Query( $args ); ?>
 

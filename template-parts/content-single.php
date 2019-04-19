@@ -27,9 +27,7 @@
     </ul>
 
     <div class="entry-meta">
-      <?php if ( 'ca_blog' === get_post_type() ) : ?>
-        <?php codeaid_posted_on(); ?>
-      <?php endif; ?>
+      <?php codeaid_posted_on(); ?>
 
       <?php
         /* translators: used between list items, there is a space after the comma */
