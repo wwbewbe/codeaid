@@ -47,7 +47,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 # Normalize
 --------------------------------------------------------------*/
 html {
-  font-size: 16px;
+  font-size: 18px;
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust:     100%;
@@ -808,7 +808,6 @@ a:active {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4);
   z-index: 1;
   background-color: #529db0;
-  height: 2.5625rem;
 }
 
 #site-navi.fixed {
@@ -865,8 +864,6 @@ a:active {
   .header-nav ul li ul.sub-menu {
     display: none;            /*サブメニューは最初は非表示にしておく*/
     position: absolute;        /*絶対配置にしておかないとうまくいかない*/
-    top: 2.5625rem;
-    left: 0;
     border-top: 1px solid #EEE;    /*ボーダートップを指定*/
     width: 160px;
   }
@@ -1311,7 +1308,7 @@ h3.entry-title {
 }
 
 .entry-content a {
-  text-decoration: underline;
+  /*text-decoration: underline;*/
 }
 /*--------------------------------------------------------------
 ## Posts and pages
@@ -1344,7 +1341,7 @@ h3.entry-title {
 ### Posts and pages customize
 --------------------------------------------------------------*/
 .entry-summary {
-  font-size: 1rem;
+  font-size: 0.8rem;
   margin: 0.3125rem 0 0;
 }
 
