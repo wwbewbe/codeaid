@@ -48,6 +48,9 @@ class Widget_Pickup_Posts extends WP_Widget {
 
     $title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : __( 'Pickup Posts' );
 
+    $number = ( ! empty( $instance['number'] ) ) ? absint( $instance['number'] ) : 5;
+    if ( ! $number )
+      $number = 5;
     $show_date = isset( $instance['show_date'] ) ? $instance['show_date'] : false;
 
     /**
@@ -66,7 +69,9 @@ class Widget_Pickup_Posts extends WP_Widget {
        echo $args['before_title'] . $title . $args['after_title'];
      } ?>
     <ul>
+    <?php $count = 0; ?>
     <?php foreach($myposts as $post):
+      $count++;
       if( ($post->object == 'post') || ($post->object == 'page') ):
       $nav_title = $post->title;    // ナビゲーションラベル名
       $post = get_post( $post->object_id );
@@ -84,6 +89,7 @@ class Widget_Pickup_Posts extends WP_Widget {
       </li>
 
     <?php endif;
+    if( $number == $count ) break;
     endforeach; ?>
 
     </ul>
@@ -108,6 +114,7 @@ class Widget_Pickup_Posts extends WP_Widget {
   public function update( $new_instance, $old_instance ) {
     $instance = $old_instance;
     $instance['title'] = sanitize_text_field( $new_instance['title'] );
+    $instance['number'] = (int) $new_instance['number'];
     $instance['show_date'] = isset( $new_instance['show_date'] ) ? (bool) $new_instance['show_date'] : false;
     return $instance;
   }
@@ -121,10 +128,14 @@ class Widget_Pickup_Posts extends WP_Widget {
    */
   public function form( $instance ) {
     $title     = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : '';
+    $number    = isset( $instance['number'] ) ? absint( $instance['number'] ) : 5;
     $show_date = isset( $instance['show_date'] ) ? (bool) $instance['show_date'] : false;
 ?>
     <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
     <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></p>
+
+    <p><label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of posts to show:' ); ?></label>
+    <input class="tiny-text" id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="number" step="1" min="1" value="<?php echo $number; ?>" size="3" /></p>
 
     <p><input class="checkbox" type="checkbox"<?php checked( $show_date ); ?> id="<?php echo $this->get_field_id( 'show_date' ); ?>" name="<?php echo $this->get_field_name( 'show_date' ); ?>" />
     <label for="<?php echo $this->get_field_id( 'show_date' ); ?>"><?php _e( 'Display post date?' ); ?></label></p>
