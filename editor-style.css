@@ -64,8 +64,8 @@ h6 {
 
 pre {
   font-family: Consolas, "メイリオ", Meiryo, "Courier 10 Pitch", Courier, monospace, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN";
-  color: #529db0;
-  font-size: 0.9375rem;
+  color: lightgray;
+  font-size: 0.8rem;
   line-height: 1.6;
   margin-bottom: 20px;
   max-width: 100%;
@@ -82,7 +82,7 @@ kbd,
 tt,
 var {
   font-family: Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-  font-size: 0.9375rem;
+  font-size: 0.8rem;
   background-color: transparent;
   color: black;
 }
@@ -90,7 +90,7 @@ pre code {
   font-family: Consolas, "メイリオ", Meiryo, Consolas, "Liberation Mono", Courier, monospace, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN";
   font-weight: 400;
   color: lightgray;
-  font-size: 0.9375rem;
+  font-size: 0.8rem;
   white-space: pre;
 }
 
