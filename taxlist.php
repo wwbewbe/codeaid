@@ -12,7 +12,7 @@
 	//if ( ($posttype == 'post') || (in_array('post', (array)$posttype)) ) {
 		$args += array(
 			//'orderby' => array( 'modified' => 'DESC', 'date' => 'DESC' ), // 更新日順に表示
-			'orderby' => 'modified date', // 更新日順に表示
+			'orderby' => 'date modified', // 作成日順に表示
 			'order'   => 'DESC', // 降順で表示
 		);
 	//}

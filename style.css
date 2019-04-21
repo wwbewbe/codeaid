@@ -2304,3 +2304,49 @@ a img            {border: none}
   color: dimgray;
   text-decoration: none;*/
 }
+
+/*--------------------------------------------------------------
+# インナーブログカード
+--------------------------------------------------------------*/
+.blog-card{
+  padding:12px;
+  margin:10px 10px;
+  border:1px solid #ddd;
+  word-wrap:break-word;
+  max-width:100%;
+  /*width:474px;*/
+  border-radius:5px;
+}
+
+.blog-card-thumbnail{
+  float:left;
+}
+
+.blog-card-content{
+  margin-left:110px;
+  line-height:120%;
+}
+.blog-card-title{
+  margin-bottom:5px;
+}
+
+.blog-card-title a{
+  font-weight:bold;
+  text-decoration:none;
+  color:#111;
+}
+
+.blog-card-excerpt{
+  color:#333;
+  font-size:90%;
+}
+
+.blog-card-footer{
+  font-size:70%;
+  color:#777;
+  margin-top:5px;
+}
+
+.clear{
+  clear:both;
+}
