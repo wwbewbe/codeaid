@@ -1,11 +1,15 @@
 @charset "UTF-8";
 
 /* 基本 */
-.mceContentBody {
+.mceContentBody, .wp-block {
   color: #404040;
   font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, sans-serif;
   font-size: 1rem;
-  line-height: 1.5
+  line-height: 1.5;
+  max-width: 800px;
+}
+.editor-post-title__input {
+  font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, sans-serif;
 }
 /*--------------------------------------------------------------
 ## Typography Customize
@@ -62,7 +66,8 @@ h6 {
   margin-bottom: 0.5rem;
 }
 
-pre {
+pre,
+.wp-block-code {
   font-family: Consolas, "メイリオ", Meiryo, "Courier 10 Pitch", Courier, monospace, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN";
   color: lightgray;
   font-size: 0.8rem;
@@ -73,25 +78,10 @@ pre {
   padding: 10px;
   border-left: 5px solid #529db0;
   background-color: #282c34;
+  white-space: pre;
 }
 .code-comment {
   color: #df871b;
-}
-code,
-kbd,
-tt,
-var {
-  font-family: Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-  font-size: 0.8rem;
-  background-color: transparent;
-  color: black;
-}
-pre code {
-  font-family: Consolas, "メイリオ", Meiryo, Consolas, "Liberation Mono", Courier, monospace, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN";
-  font-weight: 400;
-  color: lightgray;
-  font-size: 0.8rem;
-  white-space: pre;
 }
 
 p {

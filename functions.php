@@ -70,6 +70,15 @@ function codeaid_setup() {
 
   // Add theme support for selective refresh for widgets.
   add_theme_support( 'customize-selective-refresh-widgets' );
+
+  // Default block styles Gutenberg
+  add_theme_support( 'wp-block-styles' );
+
+  // Wide Alignment Gutenberg
+  add_theme_support( 'align-wide' );
+
+  // Gutenberg editor style
+  add_theme_support( 'editor-styles' );
 }
 endif;
 add_action( 'after_setup_theme', 'codeaid_setup' );
@@ -402,7 +411,8 @@ function create_post_type() {
 		'has_archive' => true,
 		'menu_position' => 5,
 		'rewrite' => array('slug' => 'blog'),
-		'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt', 'custom-fields', 'revisions' )
+		'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt', 'custom-fields', 'revisions' ),
+    'show_in_rest' => true,
 	);
 
 	register_post_type( 'ca_blog', $args );
