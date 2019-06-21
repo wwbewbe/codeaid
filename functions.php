@@ -544,3 +544,132 @@ add_filter('the_content','url_to_blog_card');//本文表示をフック
 /**
  * インナーブログカード作成（ここまで）
  */
+
+/**
+ * 更新日時をコントロール
+ * 投稿と固定ページの編集画面メインカラムにボックスを追加
+ */
+function add_update_custom_box() {
+  /* 投稿・カスタム投稿編集画面にカスタムメタボックスを追加 */
+  $screens = get_post_types();
+  foreach( $screens as $screen ) {
+    add_meta_box( 'update_mode', __('Update Mode', 'codeaid'), 'update_mode_custom_box', $screen, 'side', 'high' );
+  }
+}
+add_action( 'admin_menu', 'add_update_custom_box' );
+
+/**
+ * ボックスのコンテンツをプリント
+ *
+ * @param WP_Post $post The object for the current post/page.
+ */
+function update_mode_custom_box( $post ) {
+  // nonceフィールドを追加して後でチェックする
+  wp_nonce_field( 'save_update_mode_custom_box_data', 'update_mode_custom_box_nonce' );
+
+  /*
+   * DBから既存のvalueを検索してフォームのvalueに使うためにget_post_meta()を使用する
+   */
+  $update_mode = get_post_meta( $post->ID, 'update_mode', true );
+  $list = array( 'normal'=>'通常更新', 'postonly'=>'更新のみ', 'delete'=>'更新削除' );
+
+  echo '<div style="padding-top: 3px; overflow: hidden;">';
+  foreach( $list as $_id=>$_name ) {
+    echo  '<div style="width: 100px; float: left;">';
+    echo    '<label>';
+    if ( $_id == $update_mode || (empty($update_mode) && ($_id == 'normal')) ) {
+      echo  '<input type="radio" name="update_mode" value="'.$_id.'" checked="checked">';
+    } else {
+      echo  '<input type="radio" name="update_mode" value="'.$_id.'">';
+    }
+    echo    $_name;
+    echo    '</label> ';
+    echo  '</div>';
+  }
+//  echo  '<input type="hidden" id="last_modified" name="last_modified_hidden" value="';
+//  echo  get_the_modified_time( 'Y-m-d H:i:s' ); // 最後に更新した日時を設定
+//  echo  '">';
+  echo '</div>';
+
+  if( empty(get_post_meta( $post->ID, 'last_modified', true )) ) {
+    add_post_meta( $post->ID, 'last_modified', get_the_modified_time( 'Y-m-d H:i:s' ), true );
+  } else {
+    update_post_meta( $post->ID, 'last_modified', get_the_modified_time( 'Y-m-d H:i:s' ) );
+  }
+}
+
+/**
+ * 投稿が保存されたとき、カスタムデータも保存する
+ *
+ * @param int $post_id The ID of the post being saved.
+ */
+function save_update_mode_custom_box_data( $post_id ) {
+  /*
+   * save_postアクションは他の時にも起動する場合があるので、
+   * 先ほど作った編集フォームのから適切な認証とともに送られてきたデータかどうかを検証する必要がある。
+   */
+
+  // nonceがセットされているかどうか確認
+  if ( ! isset( $_POST['update_mode_custom_box_nonce'] ) ) {
+  	return;
+  }
+
+  // nonceが正しいかどうか検証
+  if ( ! wp_verify_nonce( $_POST['update_mode_custom_box_nonce'], 'save_update_mode_custom_box_data' ) ) {
+  	return;
+  }
+
+  // 自動保存の場合はなにもしない
+  if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+  	return;
+  }
+
+  // ユーザー権限の確認
+  if ( isset( $_POST['post_type'] ) && 'page' == $_POST['post_type'] ) {
+  	if ( ! current_user_can( 'edit_page', $post_id ) ) {
+  		return;
+  	}
+  } else {
+  	if ( ! current_user_can( 'edit_post', $post_id ) ) {
+  		return;
+  	}
+  }
+
+  /* 安全が確認できたのでデータを保存する */
+
+  // データがセットされているか確認する
+  if ( ! isset( $_POST['update_mode'] ) ) {
+  	return;
+  }
+
+  // ユーザーの入力を無害化する
+  $mydata = sanitize_text_field( $_POST['update_mode'] );
+
+  if( empty(get_post_meta( $post_id, 'update_mode', true )) ) {
+    add_post_meta( $post_id, 'update_mode', $mydata, true ); // update_modeがなければカスタムフィールド作成
+  } elseif( $mydata != get_post_meta( $post_id, 'update_mode' )) {
+    update_post_meta( $post_id, 'update_mode', $mydata ); // update_modeと入力した値が違う場合はカスタムフィールド更新
+  } elseif( "" == $mydata ) {
+    delete_post_meta( $post_id, 'update_mode' ); // 入力したデータがなければカスタムフィールド削除
+  }
+}
+add_action( 'save_post', 'save_update_mode_custom_box_data' );
+
+/* 「更新」以外は更新日時を変更しない */
+function my_insert_post_data( $data, $postarr ){
+
+  if( isset($_POST['update_mode']) && $_POST['update_mode'] == 'postonly' ) {
+    $last_modified = get_post_meta( $postarr['ID'], 'last_modified', true );
+    if ( isset($last_modified) ) {
+      $data['post_modified'] = $last_modified;
+      $data['post_modified_gmt'] = get_gmt_from_date( $last_modified );
+    }
+  } elseif( isset($_POST['update_mode']) && $_POST['update_mode'] == 'delete' ) {
+    $data['post_modified'] = $data['post_date'];
+    $data['post_modified_gmt'] = get_gmt_from_date( $data['post_date'] );
+  }
+  if (isset($_POST['update_mode'])) {
+  }
+  return $data;
+}
+add_filter( 'wp_insert_post_data', 'my_insert_post_data', 99, 2 );
