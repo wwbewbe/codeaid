@@ -350,7 +350,9 @@ function set_taxlist($params = array()) {
       'list' => 0, //表示するリスト数
       ), $params));
   ob_start();
-  include(TEMPLATEPATH . "/$file.php");
+//  get_template_part(TEMPLATEPATH . "/$file.php");
+//  include(TEMPLATEPATH . "/$file.php");
+  include(get_theme_root() .'/'. get_template() . "/$file.php");
   return ob_get_clean();
 }
 add_shortcode('taxlist', 'set_taxlist');

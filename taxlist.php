@@ -4,7 +4,7 @@
 	$args = array(
 		'post_type' => explode( ',', $posttype ), // 投稿タイプ
 		'category__not_in' => array(1), // 未分類の記事は非表示
-    'tag'           => $tagname, // タグを指定(slug)
+    //'tag'           => $tagname, // タグを指定(slug)
 		'category_name'	=> $catname, // カテゴリーを指定(slug)
 		'paged' => $paged,
   );
